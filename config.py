@@ -2,7 +2,7 @@ import os
 
 # SMTP
 SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
+SMTP_PORT = 465          # ← 587 se 465 karo
 
 # Environment variables se lo, warna fallback
 SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "jatinkmaurya09@gmail.com")

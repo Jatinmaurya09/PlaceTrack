@@ -209,10 +209,14 @@ def build_email_html(student_name, job, score, matched, missing, token):
 
 
 # ---------- Send Email ----------
+# ---------- Send Email ----------
 def send_email(to_email, subject, html_body):
-    """Send HTML email via Gmail SMTP. Returns (success, error_msg)."""
+    """Send HTML email via Gmail SMTP (SSL port 465). Returns (success, error_msg)."""
     if not config.SENDER_EMAIL or "your_email" in config.SENDER_EMAIL:
         return False, "SMTP not configured. Edit config.py first."
+
+    if not config.SENDER_PASSWORD:
+        return False, "SENDER_PASSWORD not set in environment"
 
     try:
         msg = MIMEMultipart("alternative")
@@ -221,16 +225,14 @@ def send_email(to_email, subject, html_body):
         msg["To"] = to_email
         msg.attach(MIMEText(html_body, "html"))
 
-        with smtplib.SMTP(config.SMTP_SERVER, config.SMTP_PORT, timeout=15) as server:
-            server.starttls()
+        # Port 465 uses SMTP_SSL directly (no starttls)
+        with smtplib.SMTP_SSL(config.SMTP_SERVER, config.SMTP_PORT, timeout=20) as server:
             server.login(config.SENDER_EMAIL, config.SENDER_PASSWORD)
             server.send_message(msg)
 
         return True, None
     except Exception as e:
         return False, str(e)
-
-
 # ---------- Run Auto Apply for One Student ----------
 def run_auto_apply_for_student(student):
     """Run automation for one student. Returns (sent_count, errors)."""
