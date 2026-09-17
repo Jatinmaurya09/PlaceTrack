@@ -242,6 +242,10 @@ def dashboard():
         return redirect(url_for("admin_dashboard"))
 
     student = get_student_by_roll(user["roll_no"])
+    if not student:
+        session.clear()
+        return redirect(url_for("predictor_page"))
+
     preds = get_predictions(student["id"])
     resumes = get_resumes(student["id"])
     latest = preds[0] if preds else None
@@ -258,7 +262,6 @@ def dashboard():
         viewing_as_admin=False,
     )
 
-
 # ---------- ATS Page ----------
 @app.route("/ats")
 @login_required
@@ -268,6 +271,10 @@ def ats_page():
         return redirect(url_for("admin_dashboard"))
 
     student = get_student_by_roll(user["roll_no"])
+    if not student:
+        session.clear()
+        return redirect(url_for("predictor_page"))
+
     resumes = get_resumes(student["id"])
     return render_template(
         "ats.html",
@@ -367,6 +374,10 @@ def companies_page():
         return redirect(url_for("admin_dashboard"))
 
     student = get_student_by_roll(user["roll_no"])
+    if not student:
+        session.clear()
+        return redirect(url_for("predictor_page"))
+
     preds = get_predictions(student["id"])
     resumes = get_resumes(student["id"])
 
