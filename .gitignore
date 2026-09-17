@@ -6,4 +6,3 @@ placement.db
 uploads/
 *.log
 .env
-config.py
