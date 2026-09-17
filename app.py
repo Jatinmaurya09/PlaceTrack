@@ -440,6 +440,10 @@ def auto_apply_page():
         return redirect(url_for("admin_dashboard"))
 
     student = get_student_by_roll(user["roll_no"])
+    if not student:
+        session.clear()
+        return redirect(url_for("predictor_page"))
+
     settings = get_auto_apply_settings(student["id"])
     stats = get_application_stats(student["id"])
 
@@ -552,6 +556,10 @@ def applications_page():
         return redirect(url_for("admin_dashboard"))
 
     student = get_student_by_roll(user["roll_no"])
+    if not student:
+        session.clear()
+        return redirect(url_for("predictor_page"))
+
     apps = get_applications(student["id"])
     stats = get_application_stats(student["id"])
 
