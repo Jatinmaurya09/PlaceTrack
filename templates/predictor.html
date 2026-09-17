@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Predictor — PlaceTrack</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+{% if session_user %}
+<!-- ============================================================ -->
+<!-- LOGGED-IN VIEW — with sidebar (consistent with other pages)   -->
+<!-- ============================================================ -->
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">PT</div>
+      <span>PlaceTrack</span>
+    </div>
+    <nav>
+      <a href="/dashboard" class="nav-link"><span>🏠</span> Dashboard</a>
+      <a href="/predictor" class="nav-link active"><span>🔮</span> Placement Predictor</a>
+      <a href="/ats" class="nav-link"><span>📄</span> Resume ATS</a>
+      <a href="/companies" class="nav-link"><span>🏢</span> Company Matches</a>
+      <a href="/auto-apply" class="nav-link"><span>⚡</span> Auto Apply</a>
+      <a href="/applications" class="nav-link"><span>📨</span> Applications</a>
+      {% if session_user.is_admin %}
+      <a href="/admin" class="nav-link"><span>📊</span> Admin Panel</a>
+      {% endif %}
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-mini">
+        <div class="avatar">{{ session_user.name[:1] }}</div>
+        <div>
+          <div class="user-name">{{ session_user.name }}</div>
+          <div class="user-role">{{ session_user.role }}</div>
+        </div>
+      </div>
+      <a href="/logout" class="logout-btn">↩ Logout</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h1 class="page-title">Placement Predictor</h1>
+        <p class="page-sub">Fill your academic and skill details to get your placement prediction</p>
+      </div>
+      <div class="topbar-right">
+        <span class="date-chip">📅 {{ current_date }}</span>
+      </div>
+    </header>
+
+    <div class="grid-2-1">
+      <!-- LEFT: Form -->
+      <div>
+        <form id="predict-form">
+          <!-- Personal Info -->
+          <div class="card">
+            <h2 class="form-section-title">👤 1. Personal Information</h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Full name"
+                       value="{{ session_user.name }}" required>
+              </div>
+              <div class="form-group">
+                <label>Roll Number</label>
+                <input type="text" name="roll_no" placeholder="e.g. 21CS001"
+                       value="{{ session_user.roll_no }}"
+                       style="text-transform: uppercase" required>
+              </div>
+              <div class="form-group">
+                <label>Department</label>
+                <input type="text" name="department" placeholder="e.g. Computer Science"
+                       value="{{ session_user.department }}" required>
+              </div>
+              <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" min="18" max="30" value="21" required>
+              </div>
+              <div class="form-group">
+                <label>Gender</label>
+                <select name="gender" required>
+                  <option value="">Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Branch</label>
+                <select name="branch" required>
+                  <option value="">Select</option>
+                  <option>CSE</option>
+                  <option>IT</option>
+                  <option>AI-ML</option>
+                  <option>ECE</option>
+                  <option>Mechanical</option>
+                  <option>Civil</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic -->
+          <div class="card">
+            <h2 class="form-section-title">🎓 2. Academic Performance</h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>CGPA (0–10)</label>
+                <input type="number" name="cgpa" min="0" max="10" step="0.01"
+                       placeholder="8.5" required>
+              </div>
+              <div class="form-group">
+                <label>10th Percentage</label>
+                <input type="number" name="tenth_percentage" min="0" max="100"
+                       step="0.01" placeholder="85" required>
+              </div>
+              <div class="form-group">
+                <label>12th Percentage</label>
+                <input type="number" name="twelfth_percentage" min="0" max="100"
+                       step="0.01" placeholder="82" required>
+              </div>
+              <div class="form-group">
+                <label>Backlogs</label>
+                <input type="number" name="backlogs" min="0" max="10" step="1"
+                       placeholder="0" required>
+              </div>
+              <div class="form-group">
+                <label>Attendance %</label>
+                <input type="number" name="attendance_percentage" min="0" max="100"
+                       step="0.01" placeholder="90" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical -->
+          <div class="card">
+            <h2 class="form-section-title">💻 3. Technical &amp; Experience</h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Internship Experience</label>
+                <select name="internship_experience" required>
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>DSA Skill Level</label>
+                <select name="dsa_level" required>
+                  <option value="">Select</option>
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Coding Practice</label>
+                <select name="coding_practice" required>
+                  <option value="">Select</option>
+                  <option>None</option>
+                  <option>Occasionally</option>
+                  <option>Regularly</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Projects Completed</label>
+                <input type="number" name="projects_completed" min="0" max="10"
+                       step="1" placeholder="3" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preparation -->
+          <div class="card">
+            <h2 class="form-section-title">🎯 4. Placement Preparation</h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Aptitude Preparation</label>
+                <select name="aptitude_level" required>
+                  <option value="">Select</option>
+                  <option>Not Started</option>
+                  <option>Basic</option>
+                  <option>Good</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Communication Skill</label>
+                <select name="communication_level" required>
+                  <option value="">Select</option>
+                  <option>Weak</option>
+                  <option>Average</option>
+                  <option>Good</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Mock Interviews Given</label>
+                <input type="number" name="mock_interviews" min="0" max="20"
+                       step="1" placeholder="3" required>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-block"
+                  style="padding: 1rem; font-size: 1rem">
+            🔍 Generate Prediction
+          </button>
+
+          <div id="error-box" class="alert alert-error"
+               style="display: none; margin-top: 1rem"></div>
+        </form>
+      </div>
+
+      <!-- RIGHT: Result -->
+      <div>
+        <div class="card" style="position: sticky; top: 1.5rem">
+          <h2 style="margin-bottom: 1rem">Prediction Result</h2>
+
+          <div id="result-placeholder" style="text-align: center; padding: 2rem 1rem">
+            <div style="font-size: 3rem; opacity: 0.25; margin-bottom: 0.75rem">🔮</div>
+            <p class="text-muted" style="font-size: 0.9rem">
+              Fill the form and click <b>Generate Prediction</b> to see your result.
+            </p>
+          </div>
+
+          <div id="result-panel" style="display: none">
+            <div id="result-inner" class="result-panel">
+              <h3>Placement Probability</h3>
+              <div id="result-prob" class="result-big">—</div>
+              <div id="result-label" class="result-label">—</div>
+              <div class="progress" style="margin-top: 1rem">
+                <div id="result-bar" class="progress-bar green" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <p class="disclaimer" style="text-align: center">
+              ⓘ This prediction is based on the trained ML model and does not
+              guarantee actual placement.
+            </p>
+
+            <a id="dashboard-link" href="/dashboard" class="btn btn-primary btn-block"
+               style="display: none; margin-top: 1rem">
+              📊 Go to My Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% else %}
+<!-- ============================================================ -->
+<!-- PUBLIC VIEW — for not-logged-in users                          -->
+<!-- ============================================================ -->
+<header class="public-header">
+  <div class="public-brand">
+    <div class="logo">PT</div>
+    <span>PlaceTrack</span>
+  </div>
+  <div style="display:flex;gap:.5rem;align-items:center;">
+    <button onclick="history.back()" class="btn btn-secondary"
+            style="padding:.5rem 1rem;font-size:.85rem;">
+      ← Back
+    </button>
+    <a href="/login" class="btn btn-primary"
+       style="padding:.5rem 1rem;font-size:.85rem;">
+      🔐 Login
+    </a>
+  </div>
+</header>
+
+<div class="public-container">
+  <div class="public-title">
+    <h1>Placement Predictor</h1>
+    <p>Fill your academic and skill details to get your placement prediction.</p>
+  </div>
+
+  <div class="grid-2-1">
+    <div>
+      <form id="predict-form">
+        <div class="card">
+          <h2 class="form-section-title">👤 1. Personal Information</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label>Roll Number</label>
+              <input type="text" name="roll_no" placeholder="e.g. 21CS001"
+                     style="text-transform: uppercase" required>
+            </div>
+            <div class="form-group">
+              <label>Department</label>
+              <input type="text" name="department" placeholder="e.g. Computer Science" required>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" name="age" min="18" max="30" value="21" required>
+            </div>
+            <div class="form-group">
+              <label>Gender</label>
+              <select name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Branch</label>
+              <select name="branch" required>
+                <option value="">Select</option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>AI-ML</option>
+                <option>ECE</option>
+                <option>Mechanical</option>
+                <option>Civil</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="form-section-title">🎓 2. Academic Performance</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>CGPA (0–10)</label>
+              <input type="number" name="cgpa" min="0" max="10" step="0.01"
+                     placeholder="8.5" required>
+            </div>
+            <div class="form-group">
+              <label>10th Percentage</label>
+              <input type="number" name="tenth_percentage" min="0" max="100"
+                     step="0.01" placeholder="85" required>
+            </div>
+            <div class="form-group">
+              <label>12th Percentage</label>
+              <input type="number" name="twelfth_percentage" min="0" max="100"
+                     step="0.01" placeholder="82" required>
+            </div>
+            <div class="form-group">
+              <label>Backlogs</label>
+              <input type="number" name="backlogs" min="0" max="10" step="1"
+                     placeholder="0" required>
+            </div>
+            <div class="form-group">
+              <label>Attendance %</label>
+              <input type="number" name="attendance_percentage" min="0" max="100"
+                     step="0.01" placeholder="90" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="form-section-title">💻 3. Technical &amp; Experience</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Internship Experience</label>
+              <select name="internship_experience" required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>DSA Skill Level</label>
+              <select name="dsa_level" required>
+                <option value="">Select</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Coding Practice</label>
+              <select name="coding_practice" required>
+                <option value="">Select</option>
+                <option>None</option>
+                <option>Occasionally</option>
+                <option>Regularly</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Projects Completed</label>
+              <input type="number" name="projects_completed" min="0" max="10"
+                     step="1" placeholder="3" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="form-section-title">🎯 4. Placement Preparation</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Aptitude Preparation</label>
+              <select name="aptitude_level" required>
+                <option value="">Select</option>
+                <option>Not Started</option>
+                <option>Basic</option>
+                <option>Good</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Communication Skill</label>
+              <select name="communication_level" required>
+                <option value="">Select</option>
+                <option>Weak</option>
+                <option>Average</option>
+                <option>Good</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mock Interviews Given</label>
+              <input type="number" name="mock_interviews" min="0" max="20"
+                     step="1" placeholder="3" required>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary btn-block"
+                style="padding: 1rem; font-size: 1rem">
+          🔍 Generate Prediction
+        </button>
+
+        <div id="error-box" class="alert alert-error"
+             style="display: none; margin-top: 1rem"></div>
+      </form>
+    </div>
+
+    <div>
+      <div class="card" style="position: sticky; top: 1.5rem">
+        <h2 style="margin-bottom: 1rem">Prediction Result</h2>
+
+        <div id="result-placeholder" style="text-align: center; padding: 2rem 1rem">
+          <div style="font-size: 3rem; opacity: 0.25; margin-bottom: 0.75rem">🔮</div>
+          <p class="text-muted" style="font-size: 0.9rem">
+            Fill the form and click <b>Generate Prediction</b> to see your result.
+          </p>
+        </div>
+
+        <div id="result-panel" style="display: none">
+          <div id="result-inner" class="result-panel">
+            <h3>Placement Probability</h3>
+            <div id="result-prob" class="result-big">—</div>
+            <div id="result-label" class="result-label">—</div>
+            <div class="progress" style="margin-top: 1rem">
+              <div id="result-bar" class="progress-bar green" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <p class="disclaimer" style="text-align: center">
+            ⓘ This prediction is based on the trained ML model and does not
+            guarantee actual placement.
+          </p>
+
+          <a id="dashboard-link" href="#" class="btn btn-primary btn-block"
+             style="display: none; margin-top: 1rem">
+            📊 Go to My Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<script src="/static/script.js"></script>
+</body>
+</html>

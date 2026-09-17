@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume ATS Analyzer — PlaceTrack</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">PT</div>
+          <span>PlaceTrack</span>
+        </div>
+        <nav>
+          <a
+            href="/dashboard"
+            class="nav-link {% if active=='dashboard' %}active{% endif %}"
+          >
+            <span>🏠</span> Dashboard
+          </a>
+          <a href="/predictor" class="nav-link"
+            ><span>🔮</span> Placement Predictor</a
+          >
+          <a
+            href="/ats"
+            class="nav-link {% if active=='ats' %}active{% endif %}"
+          >
+            <span>📄</span> Resume ATS
+          </a>
+          <a
+            href="/companies"
+            class="nav-link {% if active=='companies' %}active{% endif %}"
+          >
+            <span>🏢</span> Company Matches
+          </a>
+          <a
+            href="/auto-apply"
+            class="nav-link {% if active=='auto_apply' %}active{% endif %}"
+          >
+            <span>⚡</span> Auto Apply
+          </a>
+          <a
+            href="/applications"
+            class="nav-link {% if active=='applications' %}active{% endif %}"
+          >
+            <span>📨</span> Applications
+          </a>
+          {% if session_user.is_admin %}
+          <a
+            href="/admin"
+            class="nav-link {% if active=='admin' %}active{% endif %}"
+          >
+            <span>📊</span> Admin Panel
+          </a>
+          {% endif %}
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-mini">
+            <div class="avatar">{{ session_user.name[:1] }}</div>
+            <div>
+              <div class="user-name">{{ session_user.name }}</div>
+              <div class="user-role">{{ session_user.role }}</div>
+            </div>
+          </div>
+          <a href="/logout" class="logout-btn">↩ Logout</a>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h1 class="page-title">Resume ATS Analyzer</h1>
+            <p class="page-sub">
+              Measure your resume compatibility against common placement
+              keywords
+            </p>
+          </div>
+          <div class="topbar-right">
+            <span class="date-chip">📅 {{ current_date }}</span>
+          </div>
+        </header>
+
+        <!-- Latest Score Banner -->
+        {% if resumes and resumes|length > 0 %} {% set latest = resumes[0] %}
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📄</div>
+            <div class="stat-label">Latest ATS Score</div>
+            <div
+              class="stat-value {{ 'green' if latest['ats_score'] >= 60 else 'blue' }}"
+            >
+              {{ latest['ats_score'] }}/100
+            </div>
+            <div class="progress" style="margin-top: 0.5rem">
+              <div
+                class="progress-bar {{ 'green' if latest['ats_score'] >= 60 else 'blue' }}"
+                style="width:{{ latest['ats_score'] }}%"
+              ></div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-label">Matched Skills</div>
+            <div class="stat-value green">
+              {{ latest['matched_skills'].split(',')|length if
+              latest['matched_skills'] else 0 }}
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">❌</div>
+            <div class="stat-label">Missing Skills</div>
+            <div class="stat-value" style="color: var(--danger)">
+              {{ latest['missing_skills'].split(',')|length if
+              latest['missing_skills'] else 0 }}
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div class="stat-label">Last Analyzed</div>
+            <div
+              class="stat-value"
+              style="font-size: 0.95rem; margin-top: 0.5rem"
+            >
+              {{ latest['uploaded_at'][:10] }}
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Upload Section -->
+        <div class="card">
+          <h2>📤 Upload Resume</h2>
+          <p class="text-muted" style="margin-bottom: 1rem; font-size: 0.9rem">
+            Upload your resume as a PDF file. We'll scan it against {{ 40 }}+
+            in-demand placement keywords like Python, Java, SQL, Machine
+            Learning, Communication, etc.
+          </p>
+
+          <form
+            id="ats-form"
+            data-roll="{{ student['roll_no'] }}"
+            enctype="multipart/form-data"
+          >
+            <div class="form-grid">
+              <div class="form-group" style="grid-column: span 2">
+                <label>Select PDF File</label>
+                <input type="file" name="resume" accept=".pdf" required />
+              </div>
+            </div>
+            <button
+              type="submit"
+              id="ats-submit"
+              class="btn btn-primary"
+              style="margin-top: 1rem; padding: 0.8rem 2rem"
+            >
+              🔍 Analyze Resume
+            </button>
+          </form>
+
+          <div id="ats-result"></div>
+        </div>
+
+        <!-- History -->
+        {% if resumes and resumes|length > 0 %}
+        <div class="card">
+          <h2>📊 Analysis History</h2>
+          <div class="table-wrap">
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>File</th>
+                <th>ATS Score</th>
+                <th>Matched Skills</th>
+                <th>Missing Skills (top 5)</th>
+              </tr>
+              {% for r in resumes %}
+              <tr>
+                <td>{{ r['uploaded_at'][:16] }}</td>
+                <td style="font-size: 0.8rem">{{ r['filename'][:30] }}...</td>
+                <td>
+                  <span
+                    class="badge {{ 'badge-success' if r['ats_score'] >= 60 else 'badge-info' }}"
+                  >
+                    {{ r['ats_score'] }}%
+                  </span>
+                </td>
+                <td style="font-size: 0.8rem">
+                  {% if r['matched_skills'] %} {% for s in
+                  r['matched_skills'].split(',')[:5] %}
+                  <span class="badge badge-success" style="margin: 1px"
+                    >{{ s }}</span
+                  >
+                  {% endfor %} {% else %}—{% endif %}
+                </td>
+                <td style="font-size: 0.8rem">
+                  {% if r['missing_skills'] %} {% for s in
+                  r['missing_skills'].split(',')[:5] %}
+                  <span class="badge badge-danger" style="margin: 1px"
+                    >{{ s }}</span
+                  >
+                  {% endfor %} {% else %}—{% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Tips -->
+        <div class="card">
+          <h2>💡 How to Improve Your ATS Score</h2>
+
+          <div class="insight">
+            <div class="insight-icon">1</div>
+            <div>
+              <div class="insight-title">Add role-specific keywords</div>
+              <div class="insight-desc">
+                For Data roles: Python, SQL, Pandas, NumPy, Tableau, Statistics.
+                For Web: HTML, CSS, JavaScript, React, Flask, REST API.
+              </div>
+            </div>
+          </div>
+
+          <div class="insight">
+            <div class="insight-icon">2</div>
+            <div>
+              <div class="insight-title">Quantify your achievements</div>
+              <div class="insight-desc">
+                Instead of "Built a website", write "Built a website serving
+                500+ users with 95% uptime".
+              </div>
+            </div>
+          </div>
+
+          <div class="insight">
+            <div class="insight-icon">3</div>
+            <div>
+              <div class="insight-title">List technical skills clearly</div>
+              <div class="insight-desc">
+                Add a dedicated "Skills" section. Don't hide keywords inside
+                paragraphs — ATS systems scan for them.
+              </div>
+            </div>
+          </div>
+
+          <div class="insight">
+            <div class="insight-icon">4</div>
+            <div>
+              <div class="insight-title">Include soft skills too</div>
+              <div class="insight-desc">
+                Keywords like "communication", "teamwork", "leadership",
+                "problem solving" also count.
+              </div>
+            </div>
+          </div>
+
+          <div class="insight">
+            <div class="insight-icon">5</div>
+            <div>
+              <div class="insight-title">Tailor for each role</div>
+              <div class="insight-desc">
+                Keep 2-3 versions of your resume — one for each role you're
+                applying to.
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

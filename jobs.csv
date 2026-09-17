@@ -1,0 +1,13 @@
+job_id,company,role,location,package,required_skills,min_cgpa,max_backlogs
+J001,Infosys,Systems Engineer,Bengaluru,4.5 LPA,"java,sql,data structures,communication",6.0,1
+J002,TCS,Digital Developer,Pune,7.0 LPA,"python,java,sql,aptitude,communication",6.5,0
+J003,Accenture,Associate Software Engineer,Hyderabad,6.5 LPA,"python,react,sql,web development,communication",6.5,0
+J004,Wipro,Project Engineer,Chennai,4.0 LPA,"java,c,sql,communication",6.0,2
+J005,Amazon,SDE-1,Bangalore,22.0 LPA,"dsa,data structures,algorithms,oop,problem solving,python,java",7.5,0
+J006,Microsoft,Software Engineer,Hyderabad,28.0 LPA,"dsa,data structures,algorithms,oop,system design,c++",8.0,0
+J007,Zoho,Member Technical Staff,Chennai,6.5 LPA,"java,html,css,javascript,sql,problem solving",6.5,0
+J008,Freshworks,Software Engineer,Chennai,10.0 LPA,"javascript,react,node,sql,rest api,git",7.0,0
+J009,Deloitte,Analyst,Mumbai,7.5 LPA,"sql,excel,tableau,power bi,communication,problem solving",7.0,0
+J010,Goldman Sachs,Analyst,Bangalore,25.0 LPA,"python,sql,data structures,algorithms,problem solving,communication",8.0,0
+J011,Cognizant,Programmer Analyst,Chennai,5.0 LPA,"java,sql,dbms,spring boot,teamwork",6.0,1
+J012,Tata Elxsi,Embedded Engineer,Bangalore,5.5 LPA,"c,c++,linux,embedded,communication",6.5,0

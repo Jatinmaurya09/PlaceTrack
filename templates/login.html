@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlaceTrack — Login</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="login-wrap">
+  <!-- Left brand panel -->
+  <div class="login-left">
+    <div class="login-brand">
+      <div class="logo">PT</div>
+      <span>PlaceTrack</span>
+    </div>
+    <div>
+      <h1>Your placement<br>journey,<br>clearly tracked.</h1>
+      <p>A simple ML-powered dashboard to predict placement outcomes and analyze resumes.</p>
+    </div>
+    <div class="login-tagline">Placements · Power · Possibilities</div>
+  </div>
+
+  <!-- Right login form -->
+  <div class="login-right">
+    <div class="login-card">
+      <h2>Welcome back</h2>
+      <p class="sub">Enter your roll number to continue</p>
+
+      <div class="role-toggle">
+        <button id="tab-student" class="active" onclick="switchRole('student')">Student</button>
+        <button id="tab-admin" onclick="switchRole('admin')">Administrator</button>
+      </div>
+
+      <div id="student-form">
+        <div class="form-group">
+          <label>Roll Number</label>
+          <input type="text" id="roll-no" placeholder="e.g. 21CS001"
+                 style="text-transform: uppercase;">
+        </div>
+        <button class="btn btn-primary btn-block" onclick="doLogin()"
+                style="margin-top: 1rem;">
+          Sign In
+        </button>
+        <p style="text-align:center;margin-top:1rem;font-size:.85rem;color:#64748b;">
+          New student?
+          <a href="/predictor" style="color:#2563eb;font-weight:600;text-decoration:none;">
+            Fill prediction form →
+          </a>
+        </p>
+      </div>
+
+      <div id="admin-form" style="display:none;">
+        <div class="alert alert-info" style="margin-bottom:1rem;">
+          Administrator access — no password required in demo mode.
+        </div>
+        <button class="btn btn-primary btn-block" onclick="doAdminLogin()">
+          Continue as Administrator
+        </button>
+      </div>
+
+      <div id="error-msg" class="alert alert-error"
+           style="display:none;margin-top:1rem;"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentRole = "student";
+
+function switchRole(role) {
+  currentRole = role;
+  document.getElementById("tab-student").classList.toggle("active", role === "student");
+  document.getElementById("tab-admin").classList.toggle("active", role === "admin");
+  document.getElementById("student-form").style.display = role === "student" ? "block" : "none";
+  document.getElementById("admin-form").style.display = role === "admin" ? "block" : "none";
+  document.getElementById("error-msg").style.display = "none";
+}
+
+async function doLogin() {
+  const roll = document.getElementById("roll-no").value.trim().toUpperCase();
+  const errBox = document.getElementById("error-msg");
+  errBox.style.display = "none";
+
+  if (!roll) {
+    errBox.textContent = "Please enter your roll number";
+    errBox.style.display = "block";
+    return;
+  }
+
+  try {
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ role: "student", roll_no: roll }),
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      errBox.innerHTML = data.error || "Login failed";
+      if (data.redirect) {
+        errBox.innerHTML += ` <a href="${data.redirect}" style="color:inherit;text-decoration:underline;">Register here →</a>`;
+      }
+      errBox.style.display = "block";
+      return;
+    }
+
+    window.location.href = data.redirect || "/dashboard";
+  } catch (err) {
+    errBox.textContent = "Network error: " + err.message;
+    errBox.style.display = "block";
+  }
+}
+
+async function doAdminLogin() {
+  try {
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ role: "admin" }),
+    });
+    const data = await res.json();
+    window.location.href = data.redirect || "/admin";
+  } catch (err) {
+    alert("Error: " + err.message);
+  }
+}
+
+// Enter key submits
+document.getElementById("roll-no").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") doLogin();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Response — PlaceTrack</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background:linear-gradient(135deg,#eff6ff,#dbeafe);min-height:100vh;display:grid;place-items:center;padding:2rem;">
+<div style="max-width:520px;width:100%;">
+
+  <div class="card" style="text-align:center;padding:2.5rem 2rem;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:.75rem;margin-bottom:1.5rem;">
+      <div style="width:40px;height:40px;background:#2563eb;color:#fff;border-radius:10px;
+                  display:grid;place-items:center;font-weight:700;">PT</div>
+      <span style="font-size:1.25rem;font-weight:700;">PlaceTrack</span>
+    </div>
+
+    {% if status == "success" %}
+      <div style="font-size:3.5rem;margin-bottom:1rem;">🎉</div>
+      <h2 style="color:var(--success);margin-bottom:.75rem;">Application Approved!</h2>
+    {% elif status == "info" %}
+      <div style="font-size:3.5rem;margin-bottom:1rem;">ℹ️</div>
+      <h2 style="color:var(--blue);margin-bottom:.75rem;">Already Responded</h2>
+    {% else %}
+      <div style="font-size:3.5rem;margin-bottom:1rem;">⚠️</div>
+      <h2 style="color:var(--danger);margin-bottom:.75rem;">Oops!</h2>
+    {% endif %}
+
+    <p style="color:var(--text-muted);margin-bottom:1.5rem;">{{ message }}</p>
+
+    {% if application %}
+    <div style="background:#f8fafc;border-radius:10px;padding:1rem;text-align:left;margin-bottom:1.5rem;">
+      <div style="font-weight:700;font-size:1.05rem;margin-bottom:.25rem;">
+        {{ application['company'] }}
+      </div>
+      <div style="color:var(--text-muted);font-size:.85rem;">
+        {{ application['role'] }} · {{ application['location'] }}
+      </div>
+      <div style="margin-top:.75rem;">
+        <span class="badge badge-info">Match: {{ application['match_score'] }}%</span>
+      </div>
+    </div>
+    {% endif %}
+
+    <a href="/dashboard" class="btn btn-primary btn-block" style="text-decoration:none;">
+      Go to Dashboard
+    </a>
+  </div>
+
+  <p style="text-align:center;color:var(--text-muted);font-size:.8rem;margin-top:1rem;">
+    Demo opportunity — verify details on the employer's official careers page.
+  </p>
+</div>
+</body>
+</html>

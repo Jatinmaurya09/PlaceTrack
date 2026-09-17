@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applications — PlaceTrack</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">PT</div>
+          <span>PlaceTrack</span>
+        </div>
+        <nav>
+          <a
+            href="/dashboard"
+            class="nav-link {% if active=='dashboard' %}active{% endif %}"
+          >
+            <span>🏠</span> Dashboard
+          </a>
+          <a href="/predictor" class="nav-link"
+            ><span>🔮</span> Placement Predictor</a
+          >
+          <a
+            href="/ats"
+            class="nav-link {% if active=='ats' %}active{% endif %}"
+          >
+            <span>📄</span> Resume ATS
+          </a>
+          <a
+            href="/companies"
+            class="nav-link {% if active=='companies' %}active{% endif %}"
+          >
+            <span>🏢</span> Company Matches
+          </a>
+          <a
+            href="/auto-apply"
+            class="nav-link {% if active=='auto_apply' %}active{% endif %}"
+          >
+            <span>⚡</span> Auto Apply
+          </a>
+          <a
+            href="/applications"
+            class="nav-link {% if active=='applications' %}active{% endif %}"
+          >
+            <span>📨</span> Applications
+          </a>
+          {% if session_user.is_admin %}
+          <a
+            href="/admin"
+            class="nav-link {% if active=='admin' %}active{% endif %}"
+          >
+            <span>📊</span> Admin Panel
+          </a>
+          {% endif %}
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-mini">
+            <div class="avatar">{{ session_user.name[:1] }}</div>
+            <div>
+              <div class="user-name">{{ session_user.name }}</div>
+              <div class="user-role">{{ session_user.role }}</div>
+            </div>
+          </div>
+          <a href="/logout" class="logout-btn">↩ Logout</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h1 class="page-title">My Applications</h1>
+            <p class="page-sub">Track all your job matches and applications</p>
+          </div>
+          <div class="topbar-right">
+            <span class="date-chip">📅 {{ current_date }}</span>
+          </div>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📨</div>
+            <div class="stat-label">Total</div>
+            <div class="stat-value">{{ stats.total }}</div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="stat-icon"
+              style="background: var(--success-bg); color: var(--success)"
+            >
+              ✅
+            </div>
+            <div class="stat-label">Approved</div>
+            <div class="stat-value green">{{ stats.approved }}</div>
+          </div>
+          <div class="stat-card">
+            <div
+              class="stat-icon"
+              style="background: var(--danger-bg); color: var(--danger)"
+            >
+              ✕
+            </div>
+            <div class="stat-label">Skipped</div>
+            <div class="stat-value" style="color: var(--danger)">
+              {{ stats.skipped }}
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">⏳</div>
+            <div class="stat-label">Pending</div>
+            <div class="stat-value blue">{{ stats.pending }}</div>
+          </div>
+        </div>
+
+        <!-- Applications List -->
+        <div class="card">
+          <h2>📋 Application History</h2>
+
+          {% if applications %}
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Company</th>
+                  <th>Role</th>
+                  <th>Location</th>
+                  <th>Match</th>
+                  <th>Status</th>
+                  <th>Responded</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for a in applications %}
+                <tr>
+                  <td style="font-size: 0.8rem; white-space: nowrap">
+                    {{ a['created_at'][:16] }}
+                  </td>
+                  <td>
+                    <div style="font-weight: 700">{{ a['company'] }}</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted)">
+                      {{ a['package'] }}
+                    </div>
+                  </td>
+                  <td style="font-size: 0.85rem">{{ a['role'] }}</td>
+                  <td style="font-size: 0.85rem">{{ a['location'] }}</td>
+                  <td>
+                    <span
+                      style="font-weight:700;
+                    color:{{ '#16a34a' if a['match_score'] >= 70 else '#2563eb' if a['match_score'] >= 50 else '#dc2626' }};"
+                    >
+                      {{ a['match_score'] }}%
+                    </span>
+                  </td>
+                  <td>
+                    {% if a['status'] == 'approved' %}
+                    <span class="badge badge-success">✅ Applied</span>
+                    {% elif a['status'] == 'skipped' %}
+                    <span class="badge badge-danger">✕ Skipped</span>
+                    {% else %}
+                    <span class="badge badge-info">⏳ Pending</span>
+                    {% endif %}
+                  </td>
+                  <td style="font-size: 0.78rem; color: var(--text-muted)">
+                    {{ a['responded_at'][:16] if a['responded_at'] else '—' }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% else %}
+          <div style="text-align: center; padding: 3rem 1rem">
+            <div style="font-size: 4rem; opacity: 0.25; margin-bottom: 1rem">
+              📭
+            </div>
+            <h3 style="color: var(--text-muted); margin-bottom: 0.5rem">
+              No applications yet
+            </h3>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Turn on Auto Apply to start receiving job match notifications via
+              email.
+            </p>
+            <a href="/auto-apply" class="btn btn-primary">
+              ⚡ Enable Auto Apply
+            </a>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Info Banner -->
+        <div class="alert alert-info" style="font-size: 0.85rem">
+          ⓘ <b>How it works:</b> When a matching job is found, you'll get an
+          email with <b>YES/APPLY</b> and <b>NO/SKIP</b> buttons. Click
+          <b>YES</b> to submit the application. All actions are tracked here.
+        </div>
+      </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

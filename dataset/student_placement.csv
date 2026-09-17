@@ -1,0 +1,801 @@
+age,gender,branch,cgpa,tenth_percentage,twelfth_percentage,backlogs,attendance_percentage,internship_experience,dsa_level,coding_practice,projects_completed,aptitude_level,communication_level,mock_interviews,placement_status
+24,Female,Other,8.29,74.12,95.67,1,98.55,No,Advanced,Regularly,6,Not Started,Good,16,Placed
+21,Female,Mechanical,6.97,89.05,64.27,1,58.86,No,Intermediate,Occasionally,5,Basic,Weak,0,Not Placed
+30,Male,Civil,8.26,81.48,54.42,1,86.1,Yes,Intermediate,Regularly,4,Basic,Average,1,Placed
+28,Male,Civil,5.53,94.27,78.75,0,52.01,No,Intermediate,None,3,Basic,Good,6,Not Placed
+25,Other,CSE,8.29,74.51,79.94,3,70.27,Yes,Intermediate,Regularly,3,Basic,Average,9,Placed
+30,Female,IT,10.0,81.71,81.13,0,75.81,No,Intermediate,None,5,Not Started,Good,19,Placed
+22,Other,CSE,5.24,82.78,62.84,0,79.03,Yes,Beginner,Occasionally,3,Good,Good,6,Not Placed
+24,Male,ECE,9.89,81.03,50.73,0,96.8,No,Advanced,None,4,Good,Weak,15,Placed
+27,Male,Other,7.03,85.92,96.32,0,83.61,Yes,Beginner,Occasionally,5,Not Started,Average,4,Not Placed
+20,Male,AI-ML,9.35,65.45,62.04,1,74.06,Yes,Beginner,Occasionally,4,Good,Weak,11,Placed
+24,Male,IT,8.91,77.54,82.45,1,90.48,No,Beginner,None,6,Not Started,Weak,16,Placed
+28,Male,CSE,7.84,59.59,83.92,2,97.53,No,Beginner,Occasionally,8,Good,Average,15,Not Placed
+28,Male,Mechanical,8.69,71.92,79.28,0,51.1,Yes,Beginner,Regularly,9,Basic,Weak,19,Placed
+25,Male,IT,9.39,76.46,65.02,2,99.13,No,Intermediate,Occasionally,6,Basic,Good,15,Placed
+22,Female,Other,7.02,83.7,63.01,1,54.31,No,Intermediate,None,6,Basic,Good,18,Not Placed
+21,Other,IT,6.64,96.82,78.69,3,90.72,No,Advanced,Regularly,3,Not Started,Good,14,Not Placed
+25,Male,Other,8.34,81.43,91.57,3,64.02,Yes,Beginner,Regularly,0,Not Started,Good,11,Placed
+25,Female,CSE,9.04,87.72,95.44,2,56.61,Yes,Advanced,Occasionally,7,Good,Good,20,Placed
+20,Female,Other,8.81,77.28,55.08,1,71.99,No,Intermediate,Occasionally,3,Good,Weak,9,Placed
+23,Other,IT,8.99,82.9,57.43,0,82.2,No,Intermediate,None,0,Good,Weak,1,Not Placed
+22,Male,Mechanical,7.18,58.12,95.35,1,69.05,Yes,Intermediate,Regularly,4,Not Started,Good,6,Placed
+19,Other,Civil,9.09,66.19,85.35,2,52.73,No,Beginner,None,7,Good,Good,12,Placed
+25,Male,IT,5.6,70.92,92.38,1,79.97,Yes,Beginner,Occasionally,3,Basic,Weak,2,Not Placed
+29,Female,Other,7.72,75.79,59.73,1,95.12,No,Intermediate,Regularly,7,Good,Average,14,Placed
+23,Female,Civil,5.03,57.01,78.2,0,69.16,No,Advanced,None,7,Basic,Weak,0,Not Placed
+19,Female,Other,6.62,61.16,83.65,1,60.82,No,Advanced,None,2,Not Started,Weak,2,Not Placed
+29,Female,Mechanical,6.83,67.18,82.65,1,72.13,Yes,Intermediate,None,8,Basic,Weak,9,Not Placed
+22,Other,Other,6.98,97.75,69.59,0,52.42,Yes,Advanced,None,2,Basic,Weak,14,Placed
+18,Male,CSE,8.48,69.58,50.74,3,91.02,Yes,Intermediate,None,0,Basic,Weak,5,Not Placed
+29,Male,AI-ML,6.94,76.21,77.98,0,91.32,Yes,Advanced,Regularly,1,Not Started,Average,19,Placed
+27,Other,IT,7.24,63.63,62.15,2,79.4,No,Intermediate,None,5,Not Started,Good,14,Not Placed
+23,Male,AI-ML,6.19,81.87,71.61,3,67.66,No,Advanced,Regularly,9,Not Started,Good,20,Placed
+30,Female,Other,6.87,67.35,95.96,0,89.99,Yes,Beginner,None,1,Not Started,Average,6,Not Placed
+29,Male,Mechanical,6.14,64.11,69.15,3,77.73,No,Intermediate,Occasionally,5,Good,Good,20,Not Placed
+26,Female,IT,5.37,77.73,90.31,0,91.3,No,Intermediate,Occasionally,0,Not Started,Good,4,Not Placed
+18,Other,Other,8.02,55.24,59.05,3,81.57,Yes,Advanced,None,10,Basic,Good,3,Placed
+28,Male,Civil,8.34,55.34,82.28,1,89.22,No,Intermediate,Occasionally,0,Not Started,Average,17,Not Placed
+28,Other,ECE,8.1,64.64,96.9,0,79.93,No,Intermediate,Regularly,4,Good,Average,2,Placed
+27,Male,Other,7.32,56.62,54.89,3,70.71,Yes,Intermediate,None,9,Good,Good,16,Placed
+29,Female,AI-ML,6.9,59.75,50.4,1,97.9,No,Beginner,Regularly,10,Good,Good,17,Placed
+29,Other,IT,9.32,69.91,70.81,0,77.06,No,Beginner,None,8,Basic,Good,17,Placed
+20,Male,AI-ML,7.6,90.31,54.45,3,80.25,No,Advanced,Occasionally,7,Not Started,Weak,1,Not Placed
+29,Female,IT,7.4,80.17,85.92,0,61.02,Yes,Beginner,Regularly,2,Not Started,Weak,12,Placed
+24,Other,Other,5.13,77.56,93.9,1,81.28,Yes,Advanced,Occasionally,2,Not Started,Weak,14,Not Placed
+21,Other,CSE,6.71,67.91,70.83,0,78.58,No,Beginner,Occasionally,0,Basic,Average,4,Not Placed
+26,Male,Civil,6.9,96.0,62.42,0,59.24,No,Advanced,None,2,Basic,Good,2,Placed
+20,Male,Other,6.99,72.47,70.85,2,52.98,No,Beginner,Regularly,10,Good,Average,4,Placed
+22,Male,AI-ML,7.9,58.83,84.73,0,80.22,Yes,Beginner,Occasionally,0,Good,Average,4,Placed
+20,Female,ECE,7.67,82.15,50.43,2,88.18,Yes,Advanced,None,7,Not Started,Average,4,Placed
+24,Male,ECE,8.04,60.01,78.29,0,76.17,Yes,Intermediate,None,0,Basic,Good,2,Not Placed
+22,Other,Mechanical,8.82,70.19,79.44,0,61.34,No,Intermediate,None,4,Basic,Weak,2,Placed
+26,Other,IT,9.06,77.33,80.61,1,83.33,No,Beginner,Occasionally,8,Not Started,Good,19,Placed
+24,Male,AI-ML,8.59,93.47,61.62,1,54.01,No,Advanced,None,6,Not Started,Good,17,Placed
+19,Male,Mechanical,9.78,76.72,84.27,1,72.09,No,Intermediate,Regularly,3,Good,Average,19,Placed
+21,Other,AI-ML,5.09,85.9,54.39,3,58.17,No,Advanced,Regularly,10,Good,Average,3,Not Placed
+26,Female,IT,5.98,98.68,59.56,1,59.22,Yes,Intermediate,Occasionally,8,Good,Average,0,Not Placed
+29,Male,Other,5.04,60.79,92.12,0,60.11,No,Advanced,Regularly,8,Not Started,Weak,15,Not Placed
+19,Male,Other,8.24,67.09,85.46,0,69.34,No,Beginner,None,1,Not Started,Weak,7,Not Placed
+27,Other,ECE,9.49,72.36,50.66,2,52.56,No,Advanced,Occasionally,9,Good,Weak,16,Placed
+26,Male,Other,6.22,73.56,61.92,1,69.89,Yes,Intermediate,None,9,Good,Good,7,Not Placed
+27,Female,Other,9.64,73.08,60.29,3,75.59,No,Beginner,Occasionally,10,Basic,Average,6,Placed
+22,Other,CSE,5.3,94.93,63.0,1,74.16,Yes,Advanced,Occasionally,5,Basic,Good,7,Not Placed
+19,Male,ECE,9.67,86.42,61.88,2,69.14,Yes,Intermediate,None,3,Good,Weak,20,Placed
+21,Other,Mechanical,6.76,81.75,53.0,2,91.96,Yes,Beginner,Regularly,7,Good,Average,11,Placed
+29,Male,Civil,5.51,68.61,72.03,0,57.27,Yes,Advanced,Regularly,10,Basic,Weak,15,Placed
+29,Male,CSE,7.43,91.25,85.17,1,75.28,Yes,Intermediate,Occasionally,6,Good,Average,11,Placed
+24,Male,Mechanical,6.28,97.02,79.12,2,53.1,No,Advanced,None,6,Basic,Average,18,Not Placed
+29,Female,IT,6.42,91.13,82.3,1,53.56,No,Advanced,None,10,Basic,Good,9,Not Placed
+30,Female,CSE,6.54,55.07,53.9,1,78.69,Yes,Beginner,Occasionally,9,Basic,Good,6,Not Placed
+25,Other,Mechanical,9.02,83.0,95.67,1,78.3,Yes,Beginner,Regularly,8,Not Started,Weak,11,Placed
+20,Male,IT,7.7,57.25,90.25,3,93.9,Yes,Intermediate,None,4,Not Started,Good,19,Not Placed
+18,Male,ECE,6.56,66.33,88.64,2,77.89,No,Beginner,Regularly,5,Good,Good,4,Not Placed
+21,Female,Civil,8.05,57.62,89.5,0,97.99,No,Intermediate,Regularly,0,Basic,Good,15,Placed
+19,Male,IT,8.58,81.57,94.77,0,52.43,Yes,Advanced,Occasionally,5,Not Started,Average,8,Placed
+25,Female,Other,6.36,85.21,76.12,3,54.9,No,Advanced,Occasionally,1,Good,Good,6,Not Placed
+21,Male,AI-ML,7.07,60.04,59.61,0,52.2,No,Intermediate,Regularly,5,Good,Weak,19,Placed
+19,Other,IT,5.61,71.89,79.61,0,59.26,Yes,Advanced,None,8,Good,Average,13,Placed
+23,Male,IT,5.91,75.07,85.66,1,77.06,Yes,Beginner,None,7,Good,Average,10,Not Placed
+23,Male,Civil,8.41,71.24,85.42,0,82.28,No,Advanced,Occasionally,8,Good,Good,6,Placed
+27,Female,AI-ML,5.91,60.33,75.03,1,52.28,No,Beginner,Regularly,9,Basic,Average,9,Not Placed
+21,Male,Other,7.63,73.43,53.29,2,97.3,No,Intermediate,None,7,Good,Weak,8,Not Placed
+23,Male,Mechanical,8.55,88.05,67.81,0,92.11,Yes,Intermediate,None,2,Basic,Weak,3,Placed
+30,Female,Mechanical,5.53,58.12,94.2,3,64.83,Yes,Advanced,Occasionally,7,Not Started,Average,15,Not Placed
+19,Other,IT,7.84,58.53,78.05,0,53.86,Yes,Advanced,Regularly,5,Good,Good,9,Placed
+27,Other,AI-ML,6.28,70.61,75.84,0,58.49,No,Beginner,None,5,Not Started,Good,18,Placed
+29,Female,AI-ML,9.81,96.44,62.9,0,56.35,No,Beginner,Occasionally,5,Basic,Average,16,Placed
+19,Female,Other,7.42,84.42,67.69,0,56.16,Yes,Advanced,None,2,Basic,Weak,8,Placed
+27,Female,Civil,9.03,84.86,92.98,0,75.93,No,Advanced,None,9,Not Started,Average,12,Placed
+21,Female,ECE,7.75,70.92,81.99,1,62.29,Yes,Intermediate,None,0,Good,Good,0,Placed
+25,Female,Mechanical,5.22,81.12,87.79,3,67.91,No,Intermediate,Occasionally,3,Good,Good,1,Not Placed
+24,Other,Civil,8.17,55.45,71.81,1,99.48,Yes,Intermediate,Regularly,9,Not Started,Average,12,Placed
+29,Other,CSE,9.76,82.99,80.25,0,84.22,No,Advanced,Occasionally,5,Not Started,Weak,8,Placed
+26,Female,Mechanical,8.01,95.18,61.92,0,97.45,No,Advanced,Regularly,10,Not Started,Average,6,Placed
+25,Male,Civil,9.1,81.95,83.86,0,57.13,Yes,Advanced,None,9,Good,Weak,15,Placed
+22,Female,Mechanical,9.42,93.44,70.52,1,69.11,Yes,Intermediate,Regularly,1,Good,Weak,18,Placed
+30,Male,ECE,6.14,86.85,71.24,2,77.74,Yes,Advanced,None,6,Good,Average,6,Placed
+19,Female,CSE,6.06,60.3,81.17,2,53.84,Yes,Beginner,None,6,Not Started,Average,5,Not Placed
+22,Female,ECE,8.05,94.71,94.94,0,50.21,Yes,Advanced,Occasionally,10,Good,Weak,17,Placed
+25,Other,Other,7.06,57.92,53.07,2,83.52,No,Advanced,None,3,Basic,Weak,18,Not Placed
+27,Male,CSE,9.2,78.49,89.59,0,82.09,Yes,Advanced,Occasionally,3,Not Started,Weak,10,Placed
+26,Male,IT,9.5,61.25,64.03,1,70.54,Yes,Advanced,Regularly,0,Good,Weak,11,Placed
+29,Other,Civil,6.77,55.52,71.31,2,74.48,Yes,Advanced,Regularly,1,Not Started,Good,9,Placed
+29,Other,CSE,6.18,73.57,51.05,3,70.77,Yes,Beginner,None,8,Basic,Average,12,Not Placed
+29,Other,Other,8.9,67.98,64.45,0,51.2,Yes,Beginner,Occasionally,9,Basic,Weak,11,Placed
+30,Other,Other,6.37,76.38,74.13,1,66.77,No,Advanced,None,7,Not Started,Average,20,Not Placed
+26,Male,ECE,9.11,80.4,52.7,0,58.85,Yes,Intermediate,Occasionally,7,Not Started,Weak,9,Placed
+30,Male,Mechanical,7.12,56.92,73.57,0,54.92,Yes,Advanced,Occasionally,8,Basic,Average,19,Placed
+30,Female,CSE,8.34,60.41,94.5,0,97.84,Yes,Advanced,Occasionally,6,Not Started,Average,17,Placed
+18,Female,Civil,5.48,79.58,55.06,0,79.97,No,Advanced,Regularly,8,Basic,Weak,3,Not Placed
+26,Other,CSE,8.12,70.1,86.69,1,86.43,No,Intermediate,Occasionally,9,Basic,Weak,4,Not Placed
+24,Other,AI-ML,7.26,87.08,69.66,1,65.77,Yes,Intermediate,Regularly,1,Good,Average,4,Not Placed
+26,Other,Mechanical,7.93,83.7,81.45,3,69.66,Yes,Intermediate,Occasionally,5,Not Started,Average,11,Not Placed
+25,Female,Civil,5.84,92.21,62.49,2,61.85,No,Beginner,Regularly,2,Not Started,Average,2,Not Placed
+18,Female,Civil,8.68,85.47,57.66,0,54.85,No,Intermediate,Regularly,10,Good,Good,7,Placed
+29,Female,IT,9.31,73.92,57.7,0,58.95,No,Beginner,Regularly,5,Basic,Weak,1,Not Placed
+25,Female,ECE,6.08,84.61,53.38,0,89.88,Yes,Beginner,None,2,Not Started,Good,17,Not Placed
+25,Female,IT,5.48,67.12,58.91,0,83.88,Yes,Intermediate,Occasionally,7,Good,Good,8,Not Placed
+28,Female,Civil,5.12,68.48,81.88,0,77.35,No,Intermediate,None,10,Good,Weak,12,Not Placed
+20,Female,Mechanical,8.21,89.72,92.32,0,73.75,Yes,Intermediate,Occasionally,3,Not Started,Weak,6,Placed
+18,Other,CSE,8.04,74.64,89.08,3,96.12,No,Beginner,Occasionally,9,Good,Good,9,Not Placed
+25,Other,CSE,7.73,90.13,82.89,0,53.64,No,Advanced,None,5,Basic,Weak,8,Placed
+20,Other,Mechanical,6.16,91.19,55.3,0,64.03,No,Intermediate,Regularly,8,Good,Average,14,Placed
+20,Other,Civil,6.95,92.73,63.88,1,67.5,Yes,Intermediate,Occasionally,1,Basic,Average,4,Not Placed
+18,Female,Other,7.97,95.33,64.87,3,89.12,No,Intermediate,Regularly,1,Basic,Good,11,Not Placed
+28,Male,CSE,7.48,73.96,62.0,1,99.63,No,Beginner,None,6,Not Started,Good,0,Not Placed
+22,Female,Other,9.94,69.03,74.72,3,62.03,Yes,Beginner,Regularly,1,Good,Weak,11,Placed
+27,Male,CSE,5.68,80.62,75.71,1,93.72,No,Advanced,Occasionally,1,Basic,Weak,5,Not Placed
+24,Other,CSE,8.48,71.33,67.13,3,91.53,Yes,Intermediate,Occasionally,3,Basic,Good,18,Placed
+27,Female,ECE,7.02,81.45,66.98,2,61.23,No,Beginner,Occasionally,8,Good,Good,18,Placed
+26,Other,ECE,7.14,86.05,89.77,0,69.97,Yes,Advanced,None,7,Basic,Average,15,Placed
+29,Female,AI-ML,8.59,85.29,87.89,1,70.48,No,Intermediate,Occasionally,1,Good,Average,18,Placed
+24,Other,IT,8.46,71.48,64.77,0,98.91,No,Beginner,None,7,Not Started,Weak,2,Placed
+26,Male,Mechanical,9.96,62.34,93.86,1,59.04,No,Intermediate,Regularly,3,Basic,Average,9,Placed
+25,Male,Mechanical,5.64,73.94,95.74,3,89.96,No,Intermediate,Occasionally,1,Basic,Weak,17,Not Placed
+29,Male,Mechanical,5.52,61.27,65.68,0,66.71,No,Beginner,Occasionally,10,Good,Weak,12,Not Placed
+19,Female,AI-ML,8.62,94.16,67.01,0,86.54,Yes,Beginner,Occasionally,9,Good,Weak,17,Placed
+18,Male,ECE,7.89,70.22,74.27,2,71.0,Yes,Beginner,Regularly,6,Good,Average,2,Not Placed
+24,Female,Civil,6.37,61.8,95.17,0,78.92,No,Intermediate,Occasionally,5,Good,Good,2,Not Placed
+24,Male,Other,5.4,56.12,92.06,0,91.63,No,Intermediate,None,9,Basic,Good,11,Not Placed
+25,Male,Other,5.43,83.42,54.92,2,90.21,No,Advanced,Regularly,4,Not Started,Average,19,Not Placed
+22,Female,Civil,9.47,83.02,68.85,0,93.32,Yes,Intermediate,Regularly,10,Not Started,Good,6,Placed
+20,Female,AI-ML,5.96,69.99,76.56,2,52.98,Yes,Beginner,Regularly,0,Not Started,Weak,7,Not Placed
+29,Male,Civil,6.62,58.16,74.15,3,84.6,No,Intermediate,Regularly,1,Not Started,Good,8,Not Placed
+25,Female,Mechanical,6.13,73.02,59.31,3,57.0,Yes,Advanced,Regularly,7,Good,Average,13,Placed
+23,Male,IT,6.77,68.69,91.22,0,70.79,No,Advanced,None,0,Basic,Good,4,Not Placed
+28,Female,CSE,5.35,84.79,82.49,0,77.43,No,Beginner,Regularly,2,Basic,Weak,20,Not Placed
+20,Other,Other,7.6,81.65,90.22,2,70.14,No,Beginner,Occasionally,1,Basic,Weak,18,Not Placed
+18,Other,ECE,5.34,71.04,91.22,0,75.98,Yes,Advanced,Regularly,4,Good,Average,20,Placed
+20,Other,ECE,9.0,64.59,85.92,1,99.83,No,Advanced,Regularly,3,Basic,Average,15,Placed
+22,Other,AI-ML,6.17,98.47,71.08,0,56.76,No,Advanced,Regularly,6,Good,Average,11,Placed
+20,Other,ECE,7.7,74.98,79.31,0,83.77,No,Beginner,Regularly,4,Basic,Weak,20,Placed
+18,Male,Mechanical,9.4,85.28,57.7,0,69.8,Yes,Advanced,Regularly,7,Not Started,Good,3,Placed
+22,Other,Other,8.25,61.18,82.33,0,56.65,Yes,Advanced,None,3,Good,Good,7,Placed
+27,Other,Civil,7.66,76.37,58.6,0,57.94,Yes,Beginner,None,5,Basic,Average,6,Not Placed
+24,Other,Mechanical,6.62,56.21,83.31,1,97.46,No,Intermediate,Regularly,3,Not Started,Good,14,Not Placed
+24,Other,AI-ML,6.67,77.24,61.02,1,93.98,Yes,Intermediate,None,1,Not Started,Good,5,Not Placed
+28,Female,Mechanical,8.35,97.42,55.64,2,95.35,No,Advanced,Occasionally,0,Not Started,Average,4,Not Placed
+26,Male,Civil,9.97,71.91,57.93,1,99.58,Yes,Intermediate,Regularly,0,Good,Average,13,Placed
+27,Other,IT,8.31,56.72,50.1,3,60.42,No,Intermediate,Occasionally,7,Good,Weak,20,Placed
+27,Other,AI-ML,7.79,56.36,84.5,3,67.77,Yes,Intermediate,Occasionally,3,Basic,Weak,12,Not Placed
+29,Other,IT,8.65,72.07,85.16,0,83.46,No,Intermediate,Regularly,4,Not Started,Weak,9,Not Placed
+30,Male,CSE,7.33,62.04,74.72,2,74.19,Yes,Advanced,Occasionally,10,Basic,Weak,17,Placed
+20,Female,IT,5.3,56.03,57.75,0,70.92,Yes,Intermediate,Occasionally,7,Basic,Good,3,Not Placed
+24,Male,CSE,7.81,88.27,54.01,1,67.89,Yes,Intermediate,Occasionally,6,Not Started,Good,7,Placed
+18,Female,CSE,9.79,75.18,50.92,0,79.69,No,Beginner,Regularly,7,Basic,Weak,10,Placed
+21,Other,IT,5.88,67.73,57.96,0,78.78,Yes,Advanced,Regularly,7,Good,Weak,16,Placed
+30,Other,AI-ML,8.45,94.6,92.76,0,58.07,Yes,Beginner,Occasionally,5,Basic,Average,17,Placed
+21,Male,Civil,6.0,60.11,61.59,2,73.59,Yes,Beginner,Regularly,9,Not Started,Good,20,Not Placed
+22,Male,Mechanical,7.68,97.06,67.01,0,77.67,Yes,Advanced,Regularly,1,Good,Good,10,Placed
+24,Female,Mechanical,5.48,68.81,55.06,0,78.51,No,Intermediate,Occasionally,5,Good,Weak,15,Not Placed
+24,Female,Civil,7.25,94.09,60.67,0,60.51,Yes,Beginner,Regularly,0,Basic,Good,11,Placed
+30,Male,Other,8.78,81.53,74.92,0,87.11,No,Advanced,None,0,Basic,Average,12,Placed
+28,Female,Other,6.74,91.38,79.17,0,51.26,No,Intermediate,Regularly,10,Good,Average,15,Placed
+30,Male,CSE,8.32,98.3,61.78,0,67.74,No,Advanced,None,2,Basic,Good,20,Placed
+21,Female,CSE,8.98,67.69,52.77,1,89.01,No,Beginner,Occasionally,2,Not Started,Weak,0,Not Placed
+30,Male,AI-ML,9.64,97.29,68.77,0,78.19,Yes,Intermediate,Regularly,10,Basic,Good,15,Placed
+24,Male,ECE,6.17,72.14,61.24,0,63.06,No,Intermediate,Occasionally,4,Basic,Average,14,Not Placed
+28,Male,IT,7.0,71.96,60.54,2,84.75,No,Advanced,Occasionally,0,Good,Weak,5,Not Placed
+20,Female,CSE,5.76,69.98,96.07,0,78.37,No,Intermediate,Occasionally,9,Basic,Good,11,Not Placed
+23,Female,Mechanical,9.96,78.82,79.58,1,89.81,No,Beginner,Occasionally,5,Basic,Weak,7,Placed
+29,Female,AI-ML,9.64,61.78,76.73,0,86.75,Yes,Beginner,Occasionally,6,Basic,Weak,6,Placed
+19,Male,IT,7.7,79.36,69.96,3,80.51,Yes,Beginner,Regularly,9,Not Started,Average,1,Not Placed
+27,Female,AI-ML,9.21,78.84,70.59,3,74.41,No,Advanced,None,10,Basic,Weak,11,Placed
+30,Female,IT,7.6,88.52,75.96,0,56.66,No,Intermediate,Regularly,2,Not Started,Good,20,Placed
+26,Male,IT,8.12,91.68,83.43,1,63.07,No,Intermediate,Regularly,3,Not Started,Weak,13,Placed
+22,Other,Civil,5.45,74.38,83.7,1,70.95,Yes,Intermediate,Regularly,9,Not Started,Weak,15,Placed
+23,Male,CSE,8.78,68.3,58.24,1,79.96,Yes,Beginner,Regularly,10,Not Started,Good,10,Placed
+29,Female,AI-ML,5.64,66.41,74.01,1,75.69,Yes,Intermediate,None,9,Good,Average,19,Placed
+29,Male,AI-ML,9.13,63.56,69.77,3,64.41,Yes,Beginner,Regularly,9,Not Started,Average,8,Placed
+29,Other,Civil,8.91,57.54,91.79,2,50.32,Yes,Intermediate,Occasionally,9,Basic,Good,9,Placed
+29,Male,Mechanical,8.54,70.07,80.31,0,74.81,No,Beginner,Regularly,9,Not Started,Good,16,Placed
+21,Female,Mechanical,5.18,66.89,75.56,0,64.28,Yes,Intermediate,Regularly,2,Basic,Average,11,Not Placed
+28,Other,Other,6.52,97.52,55.54,0,86.73,Yes,Advanced,None,0,Not Started,Weak,5,Not Placed
+27,Female,CSE,6.32,79.54,79.07,0,51.2,No,Advanced,None,7,Good,Good,18,Placed
+24,Other,CSE,6.8,70.28,55.63,0,79.24,Yes,Beginner,Occasionally,9,Not Started,Weak,10,Placed
+29,Other,ECE,5.44,80.54,66.19,3,97.07,Yes,Beginner,Regularly,9,Not Started,Good,8,Not Placed
+26,Male,Civil,9.68,61.12,56.86,3,58.72,Yes,Intermediate,Regularly,1,Good,Average,20,Placed
+24,Male,Mechanical,7.77,74.54,83.22,3,73.58,No,Intermediate,Regularly,0,Not Started,Weak,5,Not Placed
+18,Female,IT,6.53,82.55,59.9,3,54.57,Yes,Advanced,Occasionally,7,Basic,Weak,15,Placed
+18,Male,AI-ML,6.98,76.51,68.81,3,81.28,No,Intermediate,None,6,Not Started,Good,19,Not Placed
+26,Male,CSE,7.24,72.68,92.99,3,77.53,No,Beginner,Occasionally,6,Not Started,Weak,15,Not Placed
+28,Other,AI-ML,8.0,98.73,59.81,2,70.37,Yes,Beginner,Regularly,3,Not Started,Good,5,Not Placed
+26,Male,AI-ML,7.58,93.73,74.37,3,76.07,Yes,Beginner,None,10,Good,Average,4,Not Placed
+21,Other,ECE,9.6,82.43,70.13,1,94.83,Yes,Beginner,None,8,Not Started,Weak,20,Placed
+30,Other,Mechanical,7.48,80.05,50.87,1,59.81,Yes,Beginner,Occasionally,5,Not Started,Good,3,Not Placed
+26,Other,CSE,9.96,82.31,88.05,1,51.13,No,Advanced,None,1,Basic,Weak,1,Not Placed
+20,Female,AI-ML,9.26,63.86,53.31,2,93.08,Yes,Advanced,None,0,Not Started,Good,5,Not Placed
+24,Female,CSE,6.04,72.39,72.76,0,78.86,No,Beginner,Regularly,0,Not Started,Good,8,Not Placed
+23,Female,IT,9.65,56.74,76.91,0,94.53,No,Intermediate,Regularly,8,Not Started,Good,16,Placed
+25,Other,ECE,5.58,75.92,80.16,3,79.85,No,Beginner,None,3,Not Started,Average,13,Not Placed
+28,Female,IT,9.09,78.89,83.05,1,90.51,No,Advanced,None,4,Basic,Weak,6,Placed
+26,Female,CSE,6.9,65.02,62.16,0,71.48,No,Beginner,Occasionally,2,Basic,Average,18,Placed
+22,Male,Other,9.39,97.42,50.48,1,87.49,Yes,Advanced,Occasionally,3,Good,Good,0,Placed
+18,Female,CSE,9.34,95.02,84.73,1,95.65,No,Advanced,None,7,Not Started,Good,19,Placed
+20,Female,Mechanical,9.03,86.77,75.71,1,78.61,No,Beginner,Regularly,3,Good,Average,14,Placed
+27,Other,AI-ML,8.95,78.47,90.13,0,59.04,Yes,Beginner,None,8,Good,Average,17,Placed
+29,Other,AI-ML,6.52,93.28,89.43,1,63.44,Yes,Intermediate,None,8,Not Started,Weak,2,Not Placed
+25,Other,IT,5.4,60.75,90.48,1,59.93,No,Advanced,Regularly,5,Basic,Good,17,Placed
+28,Other,ECE,7.01,89.78,73.28,2,62.34,No,Intermediate,Regularly,1,Basic,Average,1,Not Placed
+23,Other,Other,5.87,60.49,66.01,1,65.32,Yes,Beginner,Occasionally,9,Not Started,Good,9,Not Placed
+25,Other,Civil,8.47,89.95,87.99,3,77.76,No,Advanced,Occasionally,10,Not Started,Good,10,Not Placed
+26,Female,AI-ML,6.73,67.13,71.66,1,79.4,Yes,Intermediate,Occasionally,6,Basic,Weak,2,Not Placed
+21,Other,Mechanical,9.88,93.59,58.81,1,71.32,Yes,Intermediate,Occasionally,8,Not Started,Weak,6,Placed
+18,Other,IT,8.2,96.54,91.04,2,80.77,No,Intermediate,Regularly,5,Not Started,Weak,7,Not Placed
+18,Male,IT,9.11,61.55,92.36,3,54.08,Yes,Beginner,None,2,Not Started,Average,18,Not Placed
+27,Female,Civil,5.66,75.36,72.38,2,54.39,No,Beginner,Occasionally,6,Basic,Good,17,Not Placed
+21,Female,Mechanical,9.31,98.16,53.63,0,58.59,No,Beginner,Occasionally,4,Good,Average,12,Placed
+29,Female,ECE,9.61,76.27,68.62,3,75.9,No,Advanced,Regularly,0,Good,Average,12,Placed
+24,Other,Mechanical,7.44,93.0,88.57,1,60.7,Yes,Beginner,Regularly,2,Not Started,Weak,18,Not Placed
+19,Other,ECE,8.03,80.9,93.29,1,64.16,No,Advanced,None,4,Basic,Good,11,Placed
+20,Other,Mechanical,8.82,71.51,59.77,1,70.02,Yes,Intermediate,None,6,Not Started,Good,16,Placed
+18,Male,Mechanical,5.87,67.57,53.21,1,90.59,No,Intermediate,Regularly,2,Basic,Weak,11,Not Placed
+22,Other,CSE,7.51,63.94,92.11,1,50.69,No,Beginner,Occasionally,5,Not Started,Good,12,Not Placed
+18,Male,IT,6.99,88.52,68.69,1,82.47,Yes,Intermediate,Occasionally,4,Basic,Weak,11,Placed
+25,Female,Mechanical,5.73,72.01,76.0,0,83.44,No,Beginner,Occasionally,0,Basic,Average,18,Not Placed
+18,Other,Civil,6.84,77.5,96.47,3,89.93,No,Advanced,None,9,Good,Average,13,Not Placed
+28,Male,Mechanical,5.34,76.66,53.2,1,96.64,Yes,Intermediate,Occasionally,5,Not Started,Weak,6,Not Placed
+18,Male,AI-ML,5.13,80.4,81.12,3,51.01,Yes,Beginner,Occasionally,7,Good,Average,12,Not Placed
+19,Other,IT,5.68,93.09,53.56,2,57.69,Yes,Intermediate,Regularly,0,Good,Average,5,Not Placed
+19,Female,AI-ML,9.82,98.15,68.02,1,94.31,No,Intermediate,Occasionally,1,Basic,Weak,18,Placed
+29,Female,IT,7.75,72.93,88.58,0,72.93,Yes,Beginner,Regularly,3,Not Started,Average,18,Placed
+23,Female,AI-ML,9.83,91.41,70.81,1,78.23,Yes,Intermediate,Occasionally,1,Basic,Good,3,Placed
+24,Male,Mechanical,7.16,88.64,97.86,0,83.15,No,Intermediate,None,10,Basic,Average,18,Placed
+22,Male,Mechanical,6.56,80.24,76.83,1,83.95,Yes,Intermediate,Occasionally,8,Basic,Weak,8,Placed
+18,Male,CSE,7.53,97.07,65.42,1,96.59,No,Intermediate,Occasionally,9,Not Started,Good,15,Placed
+18,Male,Civil,7.2,63.82,60.57,0,99.85,No,Advanced,Regularly,7,Not Started,Good,3,Placed
+20,Female,AI-ML,5.53,59.81,66.82,3,86.01,Yes,Intermediate,Regularly,7,Basic,Average,5,Not Placed
+19,Other,ECE,8.2,92.57,67.88,1,64.36,No,Intermediate,Regularly,3,Not Started,Good,7,Placed
+22,Male,CSE,6.08,74.32,53.3,1,93.99,Yes,Beginner,Occasionally,4,Basic,Weak,15,Not Placed
+29,Male,AI-ML,8.1,92.27,67.74,1,52.46,Yes,Advanced,Occasionally,3,Not Started,Good,4,Placed
+27,Female,AI-ML,8.25,94.3,72.28,0,61.55,Yes,Beginner,None,8,Not Started,Average,20,Placed
+23,Other,CSE,5.76,57.75,84.69,2,94.87,Yes,Beginner,Occasionally,1,Good,Average,9,Not Placed
+24,Other,Mechanical,5.31,93.87,81.52,3,62.81,No,Beginner,None,10,Basic,Good,12,Not Placed
+21,Female,AI-ML,8.9,74.73,84.02,1,61.03,No,Advanced,Regularly,7,Good,Weak,13,Placed
+24,Female,Mechanical,7.3,77.46,50.4,0,56.91,Yes,Beginner,Regularly,1,Good,Weak,6,Not Placed
+28,Other,CSE,5.29,82.57,60.45,2,92.96,Yes,Beginner,Regularly,0,Basic,Average,19,Not Placed
+25,Male,Mechanical,9.97,95.76,81.76,0,75.0,No,Beginner,None,9,Basic,Average,5,Placed
+28,Other,IT,5.29,55.84,73.23,1,83.74,Yes,Intermediate,Occasionally,2,Not Started,Weak,6,Not Placed
+18,Female,ECE,8.48,75.98,50.26,2,61.95,No,Beginner,Regularly,8,Basic,Good,4,Placed
+23,Male,Other,9.92,85.26,88.62,1,87.9,Yes,Advanced,Occasionally,2,Good,Good,20,Placed
+25,Male,AI-ML,6.2,86.8,87.09,2,88.0,No,Advanced,Occasionally,8,Good,Good,17,Placed
+22,Female,Civil,5.71,85.47,76.32,1,65.63,No,Intermediate,Regularly,6,Basic,Good,11,Placed
+21,Female,ECE,5.61,60.92,53.19,0,70.53,No,Advanced,None,9,Good,Weak,5,Not Placed
+19,Female,Other,6.52,68.17,86.79,3,60.48,Yes,Advanced,Occasionally,0,Not Started,Average,0,Not Placed
+23,Other,Mechanical,5.51,70.78,78.02,0,98.83,Yes,Intermediate,Regularly,9,Good,Average,3,Placed
+23,Other,AI-ML,8.46,90.4,87.53,1,82.28,Yes,Beginner,Occasionally,4,Not Started,Good,18,Placed
+28,Male,Mechanical,5.31,67.27,86.08,0,96.73,Yes,Intermediate,Occasionally,8,Good,Weak,11,Not Placed
+18,Female,IT,7.55,64.27,88.54,2,65.17,Yes,Beginner,Occasionally,2,Not Started,Weak,14,Not Placed
+26,Male,CSE,9.98,97.13,74.86,2,89.09,No,Beginner,Occasionally,8,Not Started,Good,2,Not Placed
+29,Male,AI-ML,9.07,55.39,56.74,1,88.29,No,Advanced,Occasionally,4,Basic,Good,19,Placed
+28,Male,Other,8.08,98.9,82.22,1,84.58,No,Intermediate,None,8,Not Started,Good,7,Placed
+23,Male,Other,6.53,84.78,79.78,2,98.28,No,Advanced,None,9,Basic,Average,10,Not Placed
+30,Female,IT,8.12,91.45,85.63,1,69.68,No,Advanced,Regularly,5,Good,Good,15,Placed
+20,Male,IT,7.64,67.96,58.15,1,56.54,No,Beginner,None,8,Good,Average,8,Not Placed
+21,Female,AI-ML,7.13,55.63,59.36,3,83.59,No,Advanced,None,6,Good,Weak,2,Not Placed
+29,Female,Mechanical,5.65,87.47,92.74,1,86.47,Yes,Intermediate,None,6,Not Started,Weak,4,Not Placed
+28,Other,Civil,9.43,91.7,86.0,0,78.75,No,Advanced,Occasionally,7,Good,Average,19,Placed
+21,Female,Other,7.25,87.58,93.59,3,60.34,Yes,Advanced,Occasionally,6,Good,Average,13,Placed
+20,Other,Other,5.97,61.29,86.42,0,75.22,No,Beginner,Regularly,8,Basic,Average,14,Not Placed
+27,Female,IT,6.84,88.15,78.66,0,65.61,No,Intermediate,Regularly,10,Basic,Average,5,Placed
+20,Female,ECE,7.07,88.83,81.4,2,71.37,Yes,Advanced,Regularly,8,Good,Good,3,Placed
+20,Female,IT,9.14,83.98,92.68,2,82.26,No,Beginner,Occasionally,5,Good,Weak,7,Not Placed
+21,Other,Civil,8.67,88.71,77.78,1,87.26,Yes,Advanced,None,6,Not Started,Good,18,Placed
+24,Other,Mechanical,8.85,92.22,80.35,3,61.61,No,Intermediate,None,1,Not Started,Average,4,Not Placed
+21,Male,Mechanical,5.06,82.0,57.51,3,70.27,Yes,Advanced,Occasionally,8,Good,Good,12,Not Placed
+26,Other,ECE,7.08,58.9,72.75,0,63.46,No,Advanced,Regularly,0,Basic,Good,15,Placed
+18,Other,Other,7.41,76.46,84.39,1,59.93,Yes,Beginner,Regularly,0,Good,Weak,0,Not Placed
+25,Other,IT,5.1,58.42,63.01,0,89.17,Yes,Advanced,Regularly,2,Not Started,Good,12,Placed
+24,Other,Mechanical,6.3,72.93,59.71,1,95.46,No,Beginner,Occasionally,5,Basic,Weak,10,Not Placed
+19,Male,Civil,8.8,72.91,65.06,0,68.51,No,Intermediate,Regularly,4,Basic,Average,20,Placed
+25,Other,AI-ML,5.69,57.9,61.59,0,87.56,Yes,Advanced,Regularly,1,Not Started,Good,7,Not Placed
+18,Female,CSE,7.68,70.35,60.32,1,94.85,No,Intermediate,Occasionally,8,Good,Average,7,Placed
+28,Female,CSE,6.08,59.88,70.39,1,92.31,Yes,Intermediate,None,9,Good,Weak,13,Not Placed
+29,Other,CSE,5.06,90.56,93.58,3,59.14,No,Advanced,Occasionally,3,Good,Average,12,Not Placed
+26,Other,Other,6.21,96.7,74.34,2,97.81,Yes,Beginner,Occasionally,3,Not Started,Average,2,Not Placed
+26,Female,IT,9.88,58.18,59.02,0,68.83,No,Intermediate,Occasionally,4,Basic,Weak,3,Placed
+19,Female,ECE,9.01,97.03,53.69,1,66.96,Yes,Intermediate,Occasionally,7,Not Started,Average,19,Placed
+24,Male,Mechanical,9.8,77.99,83.42,2,53.12,No,Advanced,None,9,Good,Average,14,Placed
+27,Female,AI-ML,7.44,68.18,68.37,0,74.31,Yes,Advanced,Regularly,3,Not Started,Average,14,Placed
+20,Female,Civil,5.55,58.38,89.45,1,55.45,Yes,Advanced,Occasionally,4,Basic,Good,20,Not Placed
+24,Other,AI-ML,7.74,77.03,81.66,1,62.43,No,Advanced,None,3,Not Started,Average,12,Not Placed
+29,Female,Civil,7.27,89.96,88.22,1,65.85,No,Advanced,Regularly,5,Good,Weak,8,Placed
+27,Male,Other,9.22,86.11,63.05,0,90.44,Yes,Advanced,Regularly,2,Basic,Good,9,Placed
+26,Female,IT,5.49,57.21,83.23,1,93.77,Yes,Beginner,Regularly,7,Not Started,Good,11,Not Placed
+21,Other,CSE,7.44,58.21,62.67,0,65.12,Yes,Intermediate,Occasionally,5,Not Started,Weak,13,Placed
+29,Other,IT,5.75,72.73,95.08,0,92.93,Yes,Beginner,Occasionally,9,Basic,Average,0,Not Placed
+18,Female,Other,6.62,67.99,80.55,0,92.86,No,Beginner,Regularly,4,Basic,Good,13,Placed
+19,Other,ECE,8.69,65.22,65.58,3,88.23,Yes,Advanced,Regularly,1,Good,Good,13,Placed
+18,Male,ECE,7.38,67.36,62.94,3,57.33,Yes,Intermediate,Regularly,9,Basic,Good,7,Placed
+29,Male,Other,6.88,90.35,59.16,1,84.52,Yes,Beginner,Regularly,9,Good,Average,15,Placed
+22,Female,Civil,6.97,95.89,83.34,0,97.25,No,Advanced,Regularly,6,Not Started,Good,13,Placed
+22,Female,Mechanical,7.3,72.82,60.5,0,84.13,Yes,Advanced,Regularly,1,Good,Weak,0,Placed
+28,Female,Mechanical,8.93,94.87,78.57,2,66.58,No,Intermediate,None,0,Not Started,Average,15,Not Placed
+24,Other,Civil,9.46,69.15,62.7,3,75.03,No,Beginner,Regularly,6,Basic,Weak,17,Placed
+26,Male,ECE,9.78,75.96,81.77,0,82.29,No,Beginner,Occasionally,4,Not Started,Weak,6,Placed
+26,Male,ECE,8.93,64.95,89.12,0,75.53,No,Beginner,Occasionally,0,Basic,Good,14,Placed
+20,Other,ECE,6.58,83.18,87.35,1,56.0,No,Advanced,Occasionally,3,Not Started,Good,16,Not Placed
+20,Male,IT,8.44,98.08,86.52,1,65.6,No,Intermediate,Regularly,3,Not Started,Good,18,Placed
+20,Female,ECE,7.19,81.55,59.01,3,90.12,No,Intermediate,Occasionally,9,Not Started,Weak,12,Not Placed
+21,Female,AI-ML,6.27,70.74,54.24,0,93.07,Yes,Beginner,None,6,Not Started,Average,8,Not Placed
+25,Female,CSE,9.2,83.5,83.55,3,56.87,Yes,Advanced,Regularly,8,Good,Good,14,Placed
+23,Male,ECE,5.19,60.41,67.68,1,97.62,No,Beginner,Occasionally,1,Not Started,Good,2,Not Placed
+25,Female,Civil,9.51,94.1,70.75,0,66.44,Yes,Intermediate,None,0,Good,Weak,0,Placed
+18,Other,CSE,7.31,77.14,51.5,0,83.12,Yes,Advanced,None,1,Basic,Average,15,Placed
+25,Other,IT,8.19,74.77,62.46,1,87.59,No,Beginner,Occasionally,6,Basic,Weak,7,Not Placed
+21,Male,Civil,8.3,80.78,51.62,0,90.6,Yes,Beginner,None,9,Good,Good,12,Placed
+28,Other,CSE,9.48,82.49,92.2,0,97.29,No,Advanced,Occasionally,5,Basic,Weak,7,Placed
+18,Other,Civil,8.18,58.16,61.68,0,65.65,Yes,Intermediate,None,3,Basic,Good,16,Placed
+25,Male,IT,8.07,85.04,76.75,1,92.93,No,Advanced,Regularly,0,Not Started,Average,13,Placed
+21,Female,AI-ML,5.33,65.64,51.87,0,56.58,No,Beginner,Regularly,0,Not Started,Weak,20,Not Placed
+23,Female,IT,7.59,86.41,82.01,2,85.25,Yes,Beginner,Regularly,4,Not Started,Good,20,Placed
+25,Female,IT,5.75,91.19,65.51,3,87.1,Yes,Beginner,Regularly,0,Good,Good,6,Not Placed
+21,Male,Civil,8.69,90.37,93.1,1,83.89,No,Beginner,Regularly,6,Good,Good,14,Placed
+20,Other,Other,7.56,79.31,92.63,3,62.62,No,Intermediate,Occasionally,10,Basic,Good,15,Placed
+26,Female,Mechanical,8.4,77.89,65.61,0,93.65,No,Intermediate,Regularly,0,Not Started,Weak,18,Placed
+20,Female,ECE,5.21,61.29,93.25,0,58.44,Yes,Beginner,Regularly,0,Good,Good,5,Not Placed
+26,Male,ECE,5.42,89.12,97.82,0,52.68,Yes,Intermediate,Regularly,1,Good,Weak,0,Not Placed
+30,Female,AI-ML,8.58,66.94,89.62,3,85.87,Yes,Intermediate,Regularly,10,Not Started,Good,11,Placed
+19,Male,AI-ML,5.36,76.85,90.55,1,73.77,Yes,Intermediate,None,9,Good,Weak,17,Not Placed
+19,Other,ECE,5.36,67.51,61.95,1,92.45,No,Beginner,Regularly,2,Not Started,Weak,15,Not Placed
+19,Male,Mechanical,5.06,60.89,77.68,3,69.17,No,Advanced,Regularly,10,Basic,Good,11,Not Placed
+23,Male,ECE,9.78,82.7,53.23,0,58.41,No,Advanced,Occasionally,0,Basic,Good,19,Placed
+20,Male,Other,8.69,57.39,54.56,3,91.82,No,Advanced,None,8,Basic,Good,12,Placed
+30,Male,Mechanical,6.77,87.94,97.95,0,77.45,Yes,Beginner,Occasionally,9,Not Started,Good,7,Placed
+26,Other,AI-ML,6.48,68.97,65.68,1,59.46,No,Intermediate,Regularly,7,Good,Average,0,Not Placed
+21,Other,CSE,6.75,55.01,85.91,3,86.02,No,Intermediate,Occasionally,4,Basic,Good,20,Not Placed
+18,Female,Civil,8.87,77.49,88.72,0,75.56,Yes,Beginner,Occasionally,10,Basic,Good,6,Placed
+21,Other,Other,8.31,57.06,91.19,0,80.22,Yes,Beginner,Regularly,1,Basic,Good,14,Placed
+18,Other,Other,5.93,67.15,97.89,0,73.04,No,Advanced,None,4,Good,Weak,12,Not Placed
+22,Female,AI-ML,5.87,86.11,61.59,1,91.44,Yes,Advanced,None,5,Good,Good,12,Placed
+21,Other,AI-ML,5.49,57.76,51.94,0,91.48,No,Beginner,Occasionally,0,Not Started,Weak,8,Not Placed
+25,Male,IT,8.3,91.93,69.74,3,85.47,Yes,Advanced,Regularly,10,Basic,Weak,14,Placed
+25,Male,Other,8.82,55.17,56.24,1,55.27,Yes,Intermediate,Occasionally,3,Good,Weak,3,Placed
+24,Female,IT,6.33,65.86,51.08,1,91.94,No,Beginner,Occasionally,8,Not Started,Weak,12,Not Placed
+20,Female,IT,5.1,87.6,67.3,0,83.55,Yes,Beginner,Occasionally,1,Basic,Average,11,Not Placed
+18,Female,Civil,5.41,68.92,87.62,3,84.85,No,Intermediate,Regularly,4,Good,Good,4,Not Placed
+18,Male,IT,9.84,59.48,77.18,0,68.15,Yes,Intermediate,Regularly,0,Good,Weak,6,Placed
+29,Other,Mechanical,6.48,70.85,65.01,0,93.96,Yes,Intermediate,None,3,Not Started,Good,7,Not Placed
+28,Male,ECE,8.85,66.9,81.41,1,86.27,Yes,Advanced,Regularly,3,Basic,Weak,4,Placed
+20,Female,CSE,8.12,92.08,61.14,1,55.63,Yes,Beginner,Occasionally,5,Basic,Average,8,Placed
+23,Other,AI-ML,6.91,68.79,50.69,0,70.39,Yes,Advanced,Occasionally,9,Good,Weak,13,Placed
+24,Other,Mechanical,6.03,89.71,86.69,0,94.32,No,Intermediate,None,8,Basic,Good,11,Not Placed
+23,Male,CSE,5.61,94.24,79.94,0,52.36,Yes,Advanced,Regularly,2,Not Started,Good,3,Not Placed
+23,Female,Other,8.08,74.09,86.59,0,98.07,No,Intermediate,Occasionally,8,Good,Average,19,Placed
+23,Male,Other,8.87,95.04,51.87,0,83.96,Yes,Advanced,None,5,Good,Good,7,Placed
+30,Other,Other,8.22,71.6,90.18,0,81.57,No,Advanced,None,6,Not Started,Good,16,Placed
+20,Male,Mechanical,7.65,97.42,79.74,1,63.53,Yes,Intermediate,Occasionally,9,Good,Weak,7,Placed
+23,Male,Mechanical,5.21,58.93,77.04,0,62.44,No,Advanced,Occasionally,1,Basic,Good,20,Not Placed
+25,Female,AI-ML,9.84,85.23,79.98,1,97.1,No,Beginner,Regularly,10,Basic,Weak,0,Placed
+28,Female,ECE,8.99,76.73,91.49,0,64.91,Yes,Advanced,None,9,Good,Average,19,Placed
+28,Other,IT,6.46,72.06,78.17,0,88.78,Yes,Advanced,Occasionally,5,Not Started,Good,1,Placed
+19,Male,Other,9.9,82.84,77.89,0,69.66,Yes,Beginner,None,5,Not Started,Weak,3,Placed
+22,Male,Civil,8.01,85.97,97.55,0,56.96,No,Intermediate,Regularly,1,Basic,Good,20,Placed
+18,Male,ECE,7.91,55.19,86.32,2,50.54,No,Beginner,Occasionally,1,Not Started,Weak,0,Not Placed
+29,Other,Civil,8.74,62.35,71.23,0,77.21,Yes,Advanced,Regularly,1,Good,Average,6,Placed
+18,Other,AI-ML,9.06,86.37,83.96,0,98.79,Yes,Intermediate,None,9,Good,Weak,0,Placed
+22,Female,AI-ML,8.28,84.32,68.68,0,68.46,No,Advanced,Regularly,0,Basic,Good,8,Placed
+29,Female,AI-ML,5.64,97.51,60.99,1,67.86,No,Advanced,Regularly,4,Basic,Weak,2,Not Placed
+30,Female,CSE,6.69,88.49,78.65,2,67.2,Yes,Beginner,None,7,Basic,Good,11,Not Placed
+20,Male,Civil,9.64,96.83,94.55,2,76.03,No,Beginner,Regularly,1,Not Started,Average,18,Not Placed
+21,Male,ECE,6.12,85.91,94.6,1,72.03,Yes,Intermediate,None,4,Good,Weak,14,Placed
+20,Female,ECE,6.86,68.11,66.41,2,94.0,Yes,Intermediate,Occasionally,7,Good,Good,15,Placed
+18,Male,Mechanical,7.16,59.64,75.33,1,75.28,Yes,Intermediate,None,9,Good,Good,9,Placed
+18,Female,Mechanical,7.2,89.4,60.16,0,75.39,No,Advanced,None,4,Basic,Good,5,Not Placed
+29,Other,Other,8.06,83.34,97.79,1,56.92,No,Beginner,Occasionally,1,Good,Weak,16,Not Placed
+29,Female,Mechanical,9.72,57.12,97.09,0,99.14,No,Beginner,None,2,Not Started,Weak,20,Placed
+30,Other,AI-ML,6.2,70.84,81.18,1,62.5,No,Beginner,Occasionally,5,Not Started,Weak,16,Not Placed
+22,Male,ECE,5.61,97.1,88.61,0,53.67,Yes,Intermediate,Occasionally,10,Good,Average,20,Placed
+23,Female,Civil,5.99,77.02,84.32,0,83.16,No,Beginner,None,10,Basic,Good,18,Not Placed
+20,Male,AI-ML,9.43,74.04,78.47,1,79.77,Yes,Beginner,Regularly,4,Good,Good,17,Placed
+29,Other,CSE,8.23,75.14,52.56,0,70.76,Yes,Beginner,Regularly,10,Not Started,Average,10,Placed
+26,Other,Mechanical,6.43,64.19,71.83,2,71.11,Yes,Intermediate,Occasionally,3,Not Started,Average,6,Not Placed
+22,Other,AI-ML,9.08,71.22,82.39,0,89.25,No,Beginner,Regularly,3,Not Started,Weak,9,Placed
+25,Male,AI-ML,9.31,71.27,82.52,3,59.79,Yes,Intermediate,Regularly,4,Good,Weak,6,Placed
+30,Male,CSE,9.23,57.3,67.91,1,91.01,Yes,Beginner,None,1,Not Started,Weak,4,Not Placed
+18,Male,IT,9.59,88.77,95.2,2,82.44,No,Beginner,Occasionally,8,Basic,Weak,11,Placed
+22,Male,ECE,6.26,73.33,58.03,1,70.95,Yes,Beginner,Occasionally,1,Good,Weak,15,Not Placed
+20,Other,Civil,8.78,91.18,74.02,2,72.9,No,Intermediate,None,9,Good,Weak,20,Placed
+29,Other,Other,7.3,92.42,83.16,0,62.83,No,Intermediate,Regularly,1,Not Started,Average,17,Placed
+18,Female,IT,9.21,64.33,83.46,1,87.61,No,Beginner,Occasionally,9,Not Started,Average,2,Placed
+21,Female,Mechanical,8.64,83.92,81.13,0,75.64,Yes,Advanced,Regularly,8,Basic,Average,19,Placed
+30,Male,AI-ML,8.88,75.78,63.21,0,66.04,No,Intermediate,Occasionally,2,Good,Good,14,Placed
+22,Other,CSE,8.28,93.73,57.5,0,79.8,No,Intermediate,Occasionally,9,Not Started,Good,4,Placed
+24,Other,CSE,5.89,64.49,80.53,0,99.79,No,Beginner,Occasionally,6,Basic,Weak,12,Not Placed
+18,Other,ECE,7.73,84.82,78.77,0,71.76,No,Advanced,Occasionally,3,Not Started,Average,18,Placed
+20,Female,IT,9.92,81.74,58.61,0,96.03,Yes,Beginner,Regularly,5,Good,Good,11,Placed
+19,Female,Other,9.69,67.99,83.85,0,67.25,No,Intermediate,Regularly,3,Not Started,Good,20,Placed
+26,Other,ECE,5.22,61.01,71.85,0,52.74,Yes,Intermediate,Regularly,9,Good,Average,4,Not Placed
+27,Other,AI-ML,5.82,83.67,82.05,1,60.21,No,Beginner,Regularly,6,Not Started,Good,5,Not Placed
+23,Other,ECE,5.66,87.5,90.19,0,70.93,Yes,Beginner,None,0,Good,Good,6,Not Placed
+27,Female,Civil,8.63,68.89,58.15,1,60.98,No,Advanced,Occasionally,2,Basic,Average,9,Placed
+20,Other,CSE,9.09,83.37,50.92,0,50.01,Yes,Advanced,Occasionally,2,Good,Good,15,Placed
+25,Other,CSE,6.07,72.39,87.4,0,95.75,No,Intermediate,Occasionally,0,Basic,Average,7,Not Placed
+25,Male,Mechanical,7.53,86.38,79.27,0,92.19,Yes,Advanced,None,5,Good,Good,8,Placed
+19,Male,Mechanical,9.2,63.77,83.58,0,87.11,Yes,Advanced,Regularly,10,Basic,Average,3,Placed
+23,Female,Other,8.66,94.17,90.23,0,58.39,Yes,Intermediate,Occasionally,8,Not Started,Good,20,Placed
+24,Other,AI-ML,7.71,67.65,88.53,1,56.02,No,Intermediate,Regularly,7,Good,Good,20,Placed
+19,Other,Civil,7.95,71.18,96.12,3,53.38,Yes,Intermediate,Regularly,10,Not Started,Average,7,Not Placed
+28,Male,IT,7.54,57.56,75.72,1,86.2,Yes,Intermediate,None,6,Basic,Good,6,Placed
+27,Female,ECE,6.49,59.91,73.45,0,96.44,Yes,Beginner,None,9,Good,Average,14,Not Placed
+19,Male,Other,7.83,77.7,69.29,0,71.53,Yes,Intermediate,Regularly,7,Good,Average,20,Placed
+27,Male,AI-ML,8.44,66.77,57.38,0,55.96,No,Intermediate,Occasionally,5,Not Started,Good,2,Placed
+18,Male,Mechanical,9.37,91.76,77.49,1,75.62,Yes,Intermediate,Occasionally,8,Good,Weak,16,Placed
+25,Male,ECE,8.18,55.65,63.3,1,67.44,Yes,Advanced,None,2,Good,Good,10,Placed
+18,Other,Mechanical,8.81,71.68,94.22,2,68.74,Yes,Intermediate,None,9,Not Started,Weak,8,Not Placed
+26,Other,ECE,5.8,69.84,77.99,0,81.07,No,Beginner,None,9,Good,Weak,4,Not Placed
+28,Male,IT,7.31,55.85,78.46,0,85.94,Yes,Beginner,None,8,Not Started,Good,9,Placed
+23,Female,AI-ML,5.05,60.47,67.04,3,55.53,Yes,Intermediate,None,3,Not Started,Weak,14,Not Placed
+24,Female,ECE,6.23,73.2,52.5,0,51.78,Yes,Beginner,None,6,Not Started,Average,13,Not Placed
+30,Female,Civil,8.63,76.69,51.52,2,99.72,Yes,Advanced,None,8,Not Started,Average,3,Placed
+27,Female,Other,9.96,72.79,70.32,0,61.64,No,Intermediate,Occasionally,1,Not Started,Weak,20,Placed
+24,Male,CSE,5.5,78.36,54.06,1,52.69,Yes,Beginner,None,1,Basic,Average,19,Not Placed
+27,Other,Civil,7.01,81.19,79.13,3,59.49,Yes,Beginner,None,8,Basic,Good,1,Not Placed
+20,Female,Civil,9.0,55.44,92.29,1,51.95,No,Intermediate,Occasionally,2,Not Started,Average,11,Placed
+19,Male,Other,6.02,75.42,92.38,1,69.59,No,Beginner,Occasionally,8,Basic,Weak,0,Not Placed
+26,Female,CSE,7.78,97.39,81.63,1,90.12,No,Intermediate,Regularly,4,Basic,Good,19,Placed
+25,Female,Civil,8.67,77.84,60.14,1,67.06,Yes,Beginner,None,5,Good,Average,4,Placed
+30,Male,ECE,8.08,84.81,91.42,1,72.21,No,Advanced,None,1,Not Started,Good,5,Not Placed
+29,Other,ECE,5.94,68.72,92.53,3,83.78,Yes,Beginner,None,7,Basic,Weak,10,Not Placed
+27,Other,ECE,6.78,89.06,59.44,1,75.44,No,Beginner,None,10,Good,Average,7,Not Placed
+24,Male,CSE,8.92,89.01,85.4,0,93.07,Yes,Intermediate,Regularly,8,Good,Good,6,Placed
+26,Other,Civil,7.77,77.94,63.75,2,93.3,No,Beginner,Occasionally,1,Not Started,Good,3,Not Placed
+21,Male,CSE,5.03,97.94,88.53,2,50.5,Yes,Intermediate,Occasionally,5,Not Started,Average,5,Not Placed
+30,Male,ECE,8.8,60.52,97.87,1,88.9,No,Advanced,None,5,Good,Good,15,Placed
+21,Male,Other,5.18,55.75,51.44,0,73.04,Yes,Intermediate,None,7,Not Started,Good,19,Placed
+18,Other,Civil,8.73,88.89,93.07,2,99.44,Yes,Intermediate,None,9,Not Started,Weak,14,Placed
+25,Male,Civil,6.01,90.51,79.89,0,74.16,Yes,Beginner,Regularly,4,Good,Weak,13,Not Placed
+29,Female,Mechanical,9.79,60.29,96.72,0,99.34,Yes,Advanced,Regularly,8,Good,Weak,11,Placed
+20,Other,Mechanical,6.84,66.69,72.32,1,87.73,Yes,Intermediate,Occasionally,0,Not Started,Weak,11,Not Placed
+24,Other,IT,6.63,55.77,90.67,2,62.43,Yes,Beginner,None,8,Basic,Weak,15,Placed
+29,Other,AI-ML,5.74,67.91,52.99,2,76.92,Yes,Beginner,None,9,Not Started,Weak,14,Not Placed
+19,Other,Mechanical,6.53,89.02,66.09,1,99.61,Yes,Intermediate,None,6,Basic,Average,12,Placed
+19,Female,CSE,9.38,77.79,53.22,1,92.88,No,Beginner,None,3,Good,Weak,10,Not Placed
+24,Other,Mechanical,9.98,70.32,96.82,1,54.87,Yes,Intermediate,Regularly,2,Basic,Good,16,Placed
+23,Other,IT,6.84,71.36,89.21,2,85.32,Yes,Intermediate,Occasionally,9,Good,Average,20,Placed
+20,Male,Civil,7.24,55.06,90.92,2,67.28,No,Intermediate,Occasionally,10,Not Started,Good,14,Placed
+26,Other,IT,8.61,68.19,95.02,3,50.35,Yes,Advanced,Regularly,5,Not Started,Weak,13,Placed
+27,Female,Civil,9.43,83.44,54.08,1,70.17,No,Intermediate,None,0,Good,Weak,9,Placed
+30,Female,Other,7.97,97.86,68.51,1,61.74,Yes,Beginner,Occasionally,2,Good,Good,11,Placed
+23,Female,Other,6.96,92.27,53.41,0,90.94,No,Advanced,Occasionally,1,Good,Good,15,Placed
+27,Female,Civil,7.06,56.04,60.12,0,66.87,No,Beginner,Regularly,10,Not Started,Good,14,Placed
+27,Other,AI-ML,8.48,94.54,61.01,1,91.38,Yes,Advanced,None,8,Not Started,Average,9,Placed
+23,Other,Mechanical,5.02,89.46,72.52,1,50.03,No,Advanced,Occasionally,2,Basic,Weak,3,Not Placed
+18,Female,CSE,8.1,89.34,62.89,1,65.39,Yes,Advanced,None,1,Good,Good,8,Placed
+21,Female,CSE,6.78,75.15,54.85,0,62.06,Yes,Advanced,Occasionally,3,Basic,Weak,20,Placed
+27,Other,ECE,8.97,72.51,58.04,2,61.68,Yes,Beginner,Regularly,1,Not Started,Good,19,Placed
+23,Female,Civil,5.46,68.33,57.07,0,53.41,Yes,Intermediate,None,0,Basic,Weak,8,Not Placed
+23,Male,CSE,7.94,57.89,96.71,3,59.36,No,Beginner,Regularly,5,Basic,Average,20,Not Placed
+28,Female,AI-ML,7.4,65.04,86.45,1,77.78,Yes,Intermediate,Occasionally,9,Not Started,Weak,19,Placed
+29,Female,Civil,8.21,65.85,96.45,0,64.57,No,Beginner,Regularly,7,Not Started,Good,10,Not Placed
+22,Male,AI-ML,5.32,76.3,71.11,0,70.87,No,Advanced,Regularly,9,Good,Weak,10,Placed
+18,Male,CSE,7.9,87.89,63.36,1,68.84,Yes,Advanced,Regularly,9,Basic,Average,6,Placed
+25,Other,CSE,7.81,75.85,88.32,1,93.8,Yes,Intermediate,Occasionally,1,Not Started,Average,20,Placed
+22,Other,ECE,7.8,57.55,65.66,1,95.26,Yes,Intermediate,None,8,Not Started,Weak,9,Placed
+29,Male,CSE,8.02,97.14,64.37,0,74.65,Yes,Beginner,Regularly,2,Basic,Good,3,Placed
+29,Male,Civil,8.38,96.48,61.16,2,66.51,No,Intermediate,None,7,Not Started,Average,4,Not Placed
+29,Other,Other,9.02,89.55,56.22,3,55.34,Yes,Beginner,Occasionally,7,Good,Average,4,Placed
+22,Female,Civil,6.35,98.62,62.31,3,97.67,No,Intermediate,None,2,Good,Weak,10,Not Placed
+24,Male,Civil,9.13,78.96,67.06,2,53.01,Yes,Intermediate,Regularly,2,Basic,Average,8,Placed
+21,Other,ECE,7.49,97.36,82.35,2,64.88,Yes,Intermediate,Regularly,5,Good,Average,15,Placed
+23,Female,ECE,5.39,58.33,53.0,1,64.9,Yes,Advanced,Regularly,0,Not Started,Good,8,Not Placed
+30,Male,CSE,5.29,71.09,60.1,0,66.02,Yes,Advanced,Regularly,3,Not Started,Good,3,Not Placed
+21,Female,IT,6.67,64.92,88.83,1,58.21,No,Beginner,Regularly,0,Not Started,Good,1,Not Placed
+20,Other,IT,8.92,63.62,57.05,3,89.16,No,Intermediate,Regularly,2,Not Started,Weak,13,Not Placed
+24,Male,ECE,8.54,61.2,66.45,2,56.12,Yes,Beginner,Occasionally,8,Basic,Average,2,Not Placed
+25,Female,CSE,8.94,82.39,91.5,1,81.75,No,Intermediate,Occasionally,4,Good,Weak,17,Placed
+21,Male,IT,7.59,89.38,57.44,3,56.19,No,Advanced,Occasionally,4,Good,Average,20,Placed
+30,Female,CSE,7.2,80.45,53.97,2,53.53,Yes,Advanced,None,10,Not Started,Average,5,Placed
+19,Other,CSE,5.74,61.47,73.26,3,95.47,Yes,Intermediate,None,3,Basic,Average,10,Not Placed
+29,Other,CSE,6.64,90.69,64.52,1,59.51,No,Intermediate,Occasionally,2,Not Started,Good,20,Not Placed
+27,Male,Mechanical,7.17,82.98,77.04,0,91.06,No,Advanced,None,4,Not Started,Weak,17,Placed
+20,Female,Civil,5.44,72.08,88.58,0,77.23,No,Advanced,None,10,Basic,Weak,11,Not Placed
+18,Male,CSE,6.1,84.66,56.58,2,53.89,No,Beginner,Regularly,3,Basic,Average,4,Not Placed
+25,Male,Mechanical,7.99,66.44,77.87,3,97.77,Yes,Advanced,Regularly,7,Not Started,Weak,8,Not Placed
+20,Female,ECE,8.68,70.19,74.26,1,62.35,Yes,Intermediate,None,3,Good,Good,19,Placed
+29,Female,IT,9.99,95.37,56.92,0,92.98,No,Beginner,None,10,Not Started,Weak,17,Placed
+27,Female,Civil,9.67,67.78,79.95,1,58.44,Yes,Intermediate,Occasionally,7,Good,Average,18,Placed
+24,Other,Other,8.21,75.68,63.13,1,92.7,No,Beginner,None,5,Good,Good,2,Placed
+27,Male,IT,7.11,94.17,73.42,0,50.66,No,Intermediate,Regularly,10,Basic,Good,8,Placed
+22,Male,Civil,8.18,86.14,53.95,1,75.59,Yes,Advanced,None,4,Basic,Average,3,Placed
+27,Other,Other,8.93,57.74,72.06,3,88.47,No,Intermediate,Occasionally,3,Not Started,Weak,16,Not Placed
+22,Female,IT,5.59,61.48,64.71,0,96.74,No,Beginner,Regularly,3,Good,Average,16,Not Placed
+24,Other,Civil,7.05,55.35,89.47,2,95.46,Yes,Intermediate,Regularly,3,Good,Weak,1,Not Placed
+26,Other,IT,9.2,82.76,52.73,3,90.98,Yes,Beginner,Regularly,10,Not Started,Weak,8,Placed
+29,Other,IT,6.92,74.7,70.09,0,94.41,No,Intermediate,Regularly,8,Not Started,Good,8,Placed
+22,Male,Other,7.86,60.91,72.0,0,59.96,No,Advanced,None,3,Not Started,Average,4,Not Placed
+18,Other,IT,7.94,97.15,84.8,1,64.21,Yes,Advanced,Occasionally,8,Basic,Good,14,Placed
+27,Male,IT,5.92,78.31,77.57,3,64.45,No,Intermediate,None,9,Not Started,Average,14,Not Placed
+27,Male,Other,6.81,65.64,82.03,0,68.85,No,Intermediate,None,5,Not Started,Average,2,Not Placed
+18,Male,ECE,6.67,77.03,87.3,0,69.67,Yes,Intermediate,Regularly,9,Good,Good,18,Placed
+19,Female,CSE,5.13,84.9,91.39,1,77.23,Yes,Beginner,Occasionally,6,Not Started,Average,2,Not Placed
+23,Male,AI-ML,5.12,58.35,65.07,0,57.99,Yes,Intermediate,Regularly,9,Good,Average,5,Not Placed
+26,Male,Mechanical,9.16,67.09,75.83,2,84.56,Yes,Intermediate,None,2,Good,Weak,3,Not Placed
+25,Female,AI-ML,6.37,90.51,90.33,2,58.38,Yes,Beginner,None,7,Basic,Average,12,Not Placed
+30,Male,AI-ML,7.59,75.23,97.49,2,65.52,Yes,Advanced,Regularly,2,Not Started,Average,12,Placed
+22,Other,Civil,6.49,79.05,92.7,3,75.17,No,Intermediate,None,0,Not Started,Good,10,Not Placed
+18,Other,CSE,9.7,74.04,67.83,1,89.82,No,Intermediate,None,9,Good,Good,4,Placed
+30,Male,Civil,6.3,56.93,59.37,0,86.97,Yes,Advanced,Regularly,4,Basic,Average,0,Not Placed
+24,Female,CSE,7.15,62.29,73.49,1,82.28,Yes,Advanced,None,1,Basic,Weak,8,Not Placed
+22,Other,Other,9.36,74.6,85.6,0,57.79,No,Beginner,Occasionally,9,Not Started,Weak,16,Placed
+23,Female,Other,9.21,64.2,73.64,1,77.35,No,Intermediate,Regularly,5,Good,Good,0,Placed
+30,Female,CSE,5.93,57.2,73.19,0,54.37,No,Intermediate,Occasionally,9,Not Started,Average,2,Not Placed
+24,Other,IT,9.01,92.12,90.24,1,68.87,Yes,Beginner,None,8,Not Started,Average,14,Placed
+20,Female,ECE,7.29,98.17,67.35,2,70.68,Yes,Advanced,None,0,Not Started,Weak,20,Not Placed
+29,Other,IT,7.41,89.9,91.27,3,51.99,No,Beginner,Regularly,3,Not Started,Weak,9,Not Placed
+27,Female,ECE,5.67,92.57,69.53,0,63.7,Yes,Advanced,None,0,Good,Weak,7,Not Placed
+20,Other,Civil,5.4,65.65,65.76,3,97.78,Yes,Beginner,Regularly,0,Basic,Good,11,Not Placed
+22,Male,ECE,8.64,97.27,71.79,2,97.68,Yes,Advanced,Regularly,7,Not Started,Average,14,Placed
+23,Other,Civil,7.48,63.66,86.6,0,67.62,No,Beginner,Regularly,10,Not Started,Good,8,Placed
+26,Other,Other,7.18,96.86,56.05,1,52.16,No,Advanced,Regularly,1,Not Started,Average,9,Not Placed
+30,Other,AI-ML,8.65,98.77,59.43,1,58.95,Yes,Advanced,Regularly,0,Not Started,Good,19,Placed
+29,Other,Other,8.83,86.32,95.67,1,69.61,Yes,Advanced,Occasionally,10,Basic,Average,8,Placed
+22,Female,Other,5.79,98.17,58.42,0,97.39,Yes,Advanced,Regularly,7,Basic,Weak,14,Placed
+18,Male,AI-ML,8.05,80.06,77.25,0,57.06,Yes,Advanced,Occasionally,3,Basic,Weak,20,Placed
+21,Other,ECE,5.68,66.42,77.81,3,88.18,Yes,Intermediate,None,2,Basic,Weak,20,Not Placed
+22,Female,ECE,8.76,74.23,73.5,0,55.43,No,Advanced,Regularly,3,Not Started,Good,0,Placed
+29,Male,Civil,8.28,81.12,80.95,1,99.06,Yes,Intermediate,None,10,Good,Weak,1,Placed
+27,Male,IT,9.78,58.22,61.03,1,69.08,Yes,Advanced,Regularly,4,Basic,Average,18,Placed
+27,Male,Civil,5.34,82.38,76.53,3,88.76,Yes,Intermediate,Occasionally,0,Basic,Good,13,Not Placed
+22,Male,IT,5.29,98.17,67.86,0,67.13,No,Intermediate,Occasionally,10,Not Started,Average,7,Not Placed
+24,Other,Other,6.41,63.36,81.76,3,81.38,No,Beginner,Occasionally,0,Not Started,Good,5,Not Placed
+21,Other,AI-ML,6.31,89.87,56.78,3,59.6,Yes,Advanced,None,2,Not Started,Average,11,Not Placed
+18,Female,Other,6.23,94.95,77.4,2,57.3,No,Beginner,Regularly,5,Not Started,Average,14,Not Placed
+22,Female,CSE,9.53,96.52,58.89,0,96.9,No,Beginner,None,0,Good,Good,13,Placed
+24,Female,ECE,6.25,97.25,63.37,1,95.88,No,Advanced,Occasionally,10,Good,Good,20,Placed
+27,Male,IT,6.36,77.94,60.5,2,94.37,No,Beginner,None,1,Basic,Weak,0,Not Placed
+27,Male,Civil,8.8,98.0,58.78,0,81.27,No,Advanced,Occasionally,6,Good,Weak,10,Placed
+23,Other,AI-ML,7.25,88.32,89.63,0,90.41,No,Beginner,Occasionally,0,Basic,Average,2,Not Placed
+22,Male,IT,8.88,62.11,63.71,1,53.45,Yes,Advanced,Occasionally,6,Basic,Average,18,Placed
+21,Male,Civil,5.33,75.98,94.5,2,66.74,No,Advanced,Regularly,3,Good,Average,17,Not Placed
+19,Male,ECE,7.44,86.61,96.56,0,65.69,No,Advanced,Regularly,9,Basic,Good,19,Placed
+21,Female,Other,5.17,65.88,77.42,0,81.78,Yes,Intermediate,Occasionally,5,Not Started,Good,1,Not Placed
+27,Female,ECE,5.31,83.19,56.86,3,67.8,Yes,Beginner,None,7,Basic,Weak,6,Not Placed
+27,Other,Mechanical,9.53,84.33,67.98,0,57.43,Yes,Intermediate,None,8,Not Started,Average,7,Placed
+20,Male,CSE,5.7,62.16,88.29,1,79.82,Yes,Beginner,Regularly,5,Good,Weak,18,Not Placed
+27,Male,Mechanical,7.66,79.86,67.63,3,90.72,No,Beginner,Occasionally,10,Good,Good,14,Not Placed
+18,Other,AI-ML,7.06,88.95,54.18,0,69.11,No,Beginner,None,8,Basic,Good,9,Not Placed
+25,Male,IT,6.74,76.95,76.73,0,56.61,No,Intermediate,Occasionally,3,Not Started,Good,0,Not Placed
+22,Male,AI-ML,9.5,55.53,90.57,0,59.83,No,Beginner,None,5,Basic,Weak,5,Placed
+30,Female,Other,5.11,55.4,88.2,1,61.87,Yes,Intermediate,Regularly,7,Good,Good,12,Placed
+21,Other,Civil,8.32,70.71,58.41,1,64.99,No,Advanced,Occasionally,8,Basic,Average,13,Placed
+25,Other,ECE,9.82,95.75,82.29,2,82.14,No,Beginner,Occasionally,2,Basic,Weak,2,Not Placed
+24,Other,Mechanical,7.8,65.06,60.58,1,80.05,Yes,Beginner,None,1,Not Started,Good,10,Not Placed
+19,Other,Mechanical,9.68,82.91,60.47,0,84.8,No,Advanced,None,5,Good,Weak,2,Placed
+18,Female,Other,5.26,64.77,91.96,0,68.13,No,Advanced,None,3,Basic,Weak,18,Not Placed
+29,Female,Mechanical,7.09,69.15,61.98,0,91.2,No,Beginner,Occasionally,0,Not Started,Good,9,Not Placed
+28,Male,Other,6.3,92.31,62.64,1,60.2,No,Advanced,Regularly,7,Basic,Good,14,Placed
+21,Male,AI-ML,8.65,87.07,50.03,0,73.45,Yes,Intermediate,Regularly,8,Not Started,Weak,10,Placed
+25,Male,ECE,9.91,59.2,91.79,1,90.05,Yes,Intermediate,None,8,Not Started,Weak,14,Placed
+29,Male,IT,6.28,73.86,88.04,0,59.01,Yes,Beginner,Regularly,1,Basic,Good,12,Placed
+19,Female,Civil,8.27,56.28,80.11,1,55.49,Yes,Intermediate,None,8,Good,Average,4,Placed
+20,Other,IT,5.99,76.16,86.01,1,94.18,Yes,Intermediate,Regularly,6,Good,Weak,3,Not Placed
+29,Female,AI-ML,7.83,84.15,57.3,1,67.15,No,Beginner,Occasionally,4,Not Started,Weak,12,Not Placed
+18,Male,Civil,7.32,60.21,72.0,1,84.19,No,Advanced,None,6,Good,Average,8,Placed
+18,Female,Mechanical,9.86,67.71,66.86,1,51.27,Yes,Beginner,Regularly,8,Not Started,Good,16,Placed
+30,Other,CSE,8.04,72.5,54.5,0,84.5,Yes,Intermediate,Occasionally,7,Good,Good,1,Placed
+20,Other,AI-ML,6.75,95.46,73.33,3,65.81,Yes,Beginner,Regularly,5,Basic,Average,4,Not Placed
+28,Female,AI-ML,5.57,98.7,94.2,1,52.79,No,Beginner,Occasionally,3,Good,Good,15,Not Placed
+22,Female,ECE,5.76,56.98,51.92,0,80.49,Yes,Intermediate,Occasionally,0,Not Started,Good,6,Not Placed
+29,Female,IT,6.13,88.48,63.99,2,62.04,No,Intermediate,Regularly,5,Not Started,Weak,0,Not Placed
+20,Male,AI-ML,6.25,71.36,59.96,0,69.34,No,Beginner,Regularly,2,Good,Weak,11,Not Placed
+18,Female,AI-ML,9.25,72.27,61.43,2,54.03,No,Intermediate,Occasionally,5,Basic,Weak,20,Placed
+18,Female,Mechanical,7.81,88.19,93.6,0,57.36,No,Intermediate,Occasionally,5,Not Started,Average,10,Placed
+25,Female,Mechanical,7.62,95.41,72.47,1,64.9,Yes,Intermediate,Occasionally,3,Not Started,Good,11,Placed
+27,Other,Civil,5.57,96.84,72.38,0,54.49,No,Intermediate,None,1,Not Started,Good,18,Not Placed
+28,Other,Other,9.3,80.39,86.51,1,95.54,No,Intermediate,Occasionally,8,Not Started,Weak,11,Placed
+29,Male,Other,8.61,70.71,57.42,1,50.3,Yes,Intermediate,None,1,Not Started,Weak,11,Placed
+30,Male,CSE,5.34,89.65,73.39,1,74.19,No,Advanced,Occasionally,2,Basic,Average,13,Not Placed
+30,Other,Other,8.54,66.04,70.64,0,56.16,No,Beginner,None,9,Good,Good,1,Not Placed
+29,Other,ECE,7.72,79.82,78.65,2,65.38,No,Intermediate,Occasionally,0,Basic,Average,1,Not Placed
+19,Other,CSE,5.41,70.78,97.98,1,96.3,Yes,Beginner,Occasionally,6,Basic,Good,3,Not Placed
+30,Female,Civil,7.29,83.89,86.93,1,58.08,No,Advanced,Occasionally,0,Not Started,Average,19,Not Placed
+20,Female,Mechanical,7.42,65.58,69.1,3,98.29,No,Intermediate,Regularly,10,Basic,Weak,15,Not Placed
+19,Other,Other,5.83,63.43,89.72,1,60.29,Yes,Beginner,Regularly,8,Not Started,Average,9,Not Placed
+20,Female,IT,9.73,95.4,58.19,1,87.08,Yes,Intermediate,Occasionally,10,Basic,Average,12,Placed
+24,Female,Mechanical,9.25,59.48,51.46,2,77.33,No,Intermediate,None,10,Not Started,Weak,1,Not Placed
+18,Male,ECE,8.35,77.26,59.81,0,94.22,No,Intermediate,None,0,Not Started,Good,2,Not Placed
+27,Other,Mechanical,7.31,64.72,66.34,0,77.7,Yes,Intermediate,Occasionally,4,Basic,Good,18,Placed
+25,Other,ECE,7.06,56.71,74.51,1,76.73,No,Intermediate,Regularly,6,Basic,Weak,5,Placed
+30,Female,ECE,8.25,56.58,79.53,0,59.77,Yes,Intermediate,None,2,Good,Average,18,Placed
+27,Other,ECE,7.73,62.71,93.71,0,58.31,No,Intermediate,Regularly,8,Good,Average,20,Placed
+27,Male,Civil,5.31,93.14,74.47,0,95.82,Yes,Advanced,None,7,Good,Average,19,Placed
+27,Male,ECE,7.56,67.43,74.06,0,66.39,No,Advanced,Occasionally,2,Basic,Good,18,Placed
+19,Male,ECE,9.03,96.82,52.41,3,68.6,Yes,Intermediate,Regularly,4,Basic,Average,7,Placed
+20,Other,IT,7.3,80.59,51.68,0,87.99,Yes,Intermediate,None,6,Not Started,Good,13,Not Placed
+26,Other,CSE,5.26,74.21,76.46,1,66.94,Yes,Advanced,Occasionally,3,Good,Average,9,Not Placed
+24,Other,AI-ML,8.93,80.52,71.03,1,97.6,Yes,Advanced,Occasionally,4,Not Started,Weak,2,Placed
+21,Other,CSE,6.01,77.73,90.28,0,86.9,Yes,Advanced,Occasionally,2,Not Started,Weak,5,Not Placed
+27,Other,ECE,6.29,88.39,57.71,1,79.87,No,Intermediate,Regularly,8,Not Started,Good,14,Not Placed
+22,Male,IT,5.82,67.43,51.2,0,94.04,No,Beginner,Regularly,9,Not Started,Good,17,Placed
+19,Female,Mechanical,6.65,70.53,71.55,3,52.48,Yes,Beginner,Occasionally,8,Good,Weak,13,Not Placed
+30,Male,IT,8.78,94.34,61.4,0,62.85,No,Beginner,Regularly,6,Not Started,Weak,18,Placed
+28,Other,ECE,7.6,96.64,52.38,1,73.25,No,Beginner,None,9,Basic,Average,9,Not Placed
+30,Male,IT,6.02,94.27,84.78,3,61.35,No,Intermediate,Occasionally,1,Basic,Weak,14,Not Placed
+25,Other,Other,9.39,73.46,55.36,3,87.2,No,Beginner,Occasionally,6,Basic,Good,3,Placed
+21,Other,IT,9.4,89.34,79.2,3,95.96,No,Advanced,Regularly,6,Good,Weak,1,Not Placed
+26,Male,ECE,9.35,75.96,63.49,2,71.19,No,Advanced,Occasionally,10,Not Started,Good,2,Placed
+22,Other,Civil,6.19,76.89,58.33,0,67.11,Yes,Beginner,None,4,Good,Good,6,Not Placed
+30,Female,Other,7.26,64.01,68.23,0,98.08,No,Advanced,Regularly,8,Not Started,Average,15,Placed
+26,Other,IT,9.92,81.01,88.47,0,72.24,No,Intermediate,Regularly,10,Good,Average,9,Placed
+21,Female,AI-ML,8.86,63.19,68.82,0,74.45,No,Beginner,Occasionally,2,Good,Average,18,Placed
+27,Female,AI-ML,5.14,69.59,86.04,0,67.58,Yes,Beginner,Occasionally,3,Not Started,Average,16,Not Placed
+22,Other,IT,5.33,92.62,56.02,2,95.48,No,Intermediate,Occasionally,0,Good,Weak,18,Not Placed
+26,Male,Civil,7.32,64.11,87.09,0,78.45,No,Advanced,Regularly,5,Not Started,Average,4,Not Placed
+25,Female,Mechanical,9.55,58.13,61.37,0,88.11,No,Intermediate,Occasionally,3,Basic,Weak,19,Placed
+20,Male,ECE,7.69,58.04,82.51,0,90.59,Yes,Intermediate,None,0,Basic,Average,12,Placed
+18,Female,AI-ML,7.49,96.39,77.16,2,67.09,No,Advanced,Occasionally,1,Basic,Average,12,Not Placed
+20,Other,Mechanical,5.53,77.3,94.6,2,71.68,Yes,Intermediate,Occasionally,2,Good,Good,10,Not Placed
+21,Other,IT,8.28,73.01,68.59,1,92.42,No,Advanced,Regularly,8,Basic,Weak,10,Placed
+19,Female,Mechanical,9.11,90.68,53.18,2,68.16,Yes,Advanced,Occasionally,7,Not Started,Good,15,Placed
+18,Other,Other,6.9,91.78,50.92,0,89.7,Yes,Intermediate,Regularly,6,Basic,Average,14,Placed
+24,Female,CSE,8.88,69.62,89.69,0,97.05,Yes,Advanced,Occasionally,10,Basic,Weak,16,Placed
+25,Other,AI-ML,9.82,85.52,75.19,1,81.16,No,Intermediate,None,3,Good,Average,17,Placed
+24,Male,IT,6.02,88.93,87.21,0,87.08,Yes,Advanced,None,0,Not Started,Good,18,Not Placed
+22,Other,ECE,7.62,83.8,61.25,0,90.25,Yes,Beginner,Regularly,7,Good,Weak,3,Placed
+29,Male,Civil,6.44,61.67,66.56,0,92.25,Yes,Advanced,Regularly,3,Good,Good,4,Placed
+18,Other,Other,8.96,93.54,51.44,1,69.75,Yes,Advanced,Occasionally,2,Not Started,Average,6,Placed
+24,Male,IT,7.89,78.72,96.15,2,52.56,No,Intermediate,Occasionally,8,Good,Average,1,Not Placed
+30,Other,ECE,8.17,67.43,82.06,3,70.09,No,Advanced,None,9,Not Started,Average,0,Not Placed
+24,Male,Civil,8.99,73.71,94.79,3,83.69,No,Beginner,Occasionally,3,Basic,Weak,11,Not Placed
+26,Female,Civil,6.98,56.65,62.74,0,72.52,No,Beginner,None,3,Not Started,Good,9,Not Placed
+20,Female,IT,9.58,60.63,79.35,3,87.45,Yes,Advanced,Regularly,8,Not Started,Good,7,Placed
+26,Male,Other,7.67,88.68,82.57,1,67.85,No,Advanced,Occasionally,10,Not Started,Average,0,Not Placed
+18,Other,Mechanical,5.79,55.0,65.24,1,81.74,Yes,Beginner,Regularly,1,Good,Good,11,Not Placed
+18,Male,Mechanical,8.48,73.33,90.71,0,59.32,No,Intermediate,Occasionally,4,Not Started,Weak,1,Placed
+21,Other,Civil,8.97,77.99,95.46,1,87.47,No,Beginner,None,3,Not Started,Average,9,Not Placed
+26,Female,Mechanical,6.58,57.4,92.47,0,77.28,No,Beginner,Regularly,8,Not Started,Average,16,Placed
+23,Other,CSE,9.29,97.82,85.48,2,60.2,Yes,Advanced,Regularly,4,Basic,Average,2,Placed
+30,Female,Civil,9.53,64.95,63.32,2,64.6,No,Advanced,Occasionally,8,Not Started,Weak,6,Placed
+28,Other,Civil,6.38,68.38,63.52,1,87.43,No,Beginner,Regularly,10,Good,Average,11,Placed
+20,Other,ECE,9.92,68.37,96.24,0,74.13,No,Intermediate,None,8,Not Started,Average,7,Placed
+18,Other,Mechanical,5.7,65.14,50.49,0,60.8,Yes,Beginner,Regularly,1,Not Started,Average,19,Not Placed
+21,Male,Other,6.01,55.06,84.37,1,98.36,No,Beginner,Regularly,8,Basic,Average,11,Not Placed
+29,Male,Civil,5.92,87.09,83.9,1,85.76,No,Intermediate,Occasionally,2,Not Started,Good,2,Not Placed
+30,Female,Other,9.47,97.54,79.89,2,97.86,Yes,Beginner,Regularly,3,Good,Average,16,Placed
+26,Female,CSE,8.27,64.87,97.53,1,71.36,Yes,Beginner,Occasionally,0,Not Started,Weak,8,Not Placed
+20,Male,ECE,5.76,84.17,64.97,0,73.76,No,Advanced,Occasionally,0,Good,Average,9,Not Placed
+29,Female,IT,7.2,87.64,66.32,1,94.9,No,Intermediate,Regularly,0,Basic,Average,5,Not Placed
+26,Male,Other,8.08,92.33,53.79,0,76.25,No,Advanced,None,8,Not Started,Good,0,Placed
+24,Other,Civil,5.42,73.6,71.25,1,85.36,Yes,Advanced,Occasionally,10,Basic,Average,11,Not Placed
+29,Female,CSE,9.41,68.33,62.53,2,62.61,Yes,Intermediate,Regularly,7,Not Started,Good,4,Placed
+21,Female,AI-ML,9.02,69.31,66.48,2,72.34,Yes,Intermediate,Occasionally,4,Good,Weak,12,Placed
+20,Male,CSE,7.53,86.36,90.06,0,56.17,No,Beginner,None,4,Basic,Good,14,Not Placed
+27,Female,CSE,9.84,90.94,94.9,1,60.3,Yes,Advanced,None,8,Not Started,Average,10,Placed
+22,Female,ECE,7.09,62.99,58.92,2,50.05,No,Intermediate,Occasionally,2,Good,Weak,7,Not Placed
+22,Other,IT,9.92,71.32,67.88,1,51.96,Yes,Advanced,None,2,Basic,Average,4,Placed
+20,Female,AI-ML,8.34,94.69,94.57,0,98.86,Yes,Advanced,Regularly,6,Not Started,Good,1,Placed
+29,Other,Mechanical,8.17,90.49,52.97,0,62.12,Yes,Intermediate,Regularly,8,Basic,Weak,11,Placed
+26,Male,Mechanical,5.83,98.33,54.43,3,83.17,No,Beginner,Occasionally,5,Not Started,Weak,1,Not Placed
+21,Female,Other,9.41,88.19,57.81,2,91.95,No,Advanced,None,1,Good,Good,15,Placed
+28,Other,CSE,7.14,72.3,78.57,0,77.53,No,Intermediate,Regularly,0,Good,Good,20,Not Placed
+22,Male,ECE,5.81,80.99,57.22,0,57.66,No,Beginner,Regularly,1,Basic,Weak,2,Not Placed
+21,Female,ECE,5.06,84.08,96.47,1,86.41,Yes,Advanced,Regularly,0,Basic,Weak,9,Not Placed
+22,Male,Mechanical,7.8,58.45,71.44,2,80.01,No,Intermediate,Occasionally,9,Not Started,Good,18,Placed
+24,Female,Other,7.64,78.96,74.07,0,86.56,Yes,Advanced,Occasionally,9,Good,Average,7,Placed
+26,Male,Other,8.6,86.21,61.84,3,88.49,No,Intermediate,Regularly,8,Not Started,Weak,6,Not Placed
+24,Male,Other,9.45,62.36,72.61,1,98.77,No,Intermediate,Regularly,9,Good,Good,0,Placed
+30,Other,AI-ML,5.4,89.35,81.77,3,78.68,Yes,Advanced,None,7,Basic,Average,11,Not Placed
+22,Male,IT,8.66,80.69,86.06,0,67.08,Yes,Advanced,None,6,Not Started,Weak,4,Placed
+27,Female,AI-ML,5.94,96.9,86.19,1,82.42,No,Intermediate,None,2,Not Started,Weak,15,Not Placed
+27,Female,Civil,9.29,56.87,77.74,0,53.42,No,Beginner,Occasionally,7,Good,Good,3,Placed
+24,Other,Civil,9.1,66.67,93.41,3,94.87,Yes,Advanced,Regularly,1,Good,Average,16,Placed
+27,Female,IT,7.7,81.47,89.24,0,55.97,Yes,Intermediate,Occasionally,1,Good,Weak,20,Placed
+22,Female,Mechanical,8.55,68.05,86.34,0,66.39,Yes,Intermediate,Regularly,10,Basic,Average,1,Placed
+20,Female,IT,6.57,86.43,52.67,0,90.79,Yes,Beginner,None,9,Not Started,Average,11,Placed
+24,Male,ECE,7.36,88.4,50.33,2,79.87,Yes,Beginner,None,2,Good,Weak,0,Not Placed
+30,Male,Civil,9.11,59.51,60.2,1,69.68,No,Beginner,None,6,Basic,Average,11,Placed
+28,Female,CSE,7.3,77.61,81.85,0,73.67,No,Advanced,None,0,Good,Weak,11,Not Placed
+28,Other,CSE,6.79,77.39,69.74,0,92.73,No,Intermediate,Regularly,7,Not Started,Average,11,Placed
+19,Male,Mechanical,7.47,71.25,69.32,1,67.0,No,Intermediate,None,6,Good,Weak,18,Placed
+29,Other,ECE,9.14,96.05,92.46,2,93.48,Yes,Intermediate,Regularly,3,Not Started,Good,16,Placed
+26,Female,AI-ML,6.68,91.41,92.99,2,54.41,Yes,Beginner,Regularly,4,Basic,Weak,19,Not Placed
+27,Female,ECE,5.87,85.68,93.64,0,88.84,Yes,Intermediate,Occasionally,9,Basic,Weak,10,Placed
+27,Male,CSE,8.56,86.43,65.07,2,92.38,No,Advanced,None,0,Good,Weak,12,Not Placed
+29,Female,CSE,9.13,75.32,83.17,1,59.09,Yes,Beginner,None,3,Not Started,Average,7,Not Placed
+18,Male,Civil,5.5,95.52,63.04,0,71.52,Yes,Beginner,Occasionally,0,Not Started,Good,9,Not Placed
+30,Female,ECE,6.2,85.56,59.15,0,58.27,No,Beginner,Regularly,0,Not Started,Average,7,Not Placed
+23,Female,ECE,5.71,87.08,58.86,2,85.33,No,Beginner,None,9,Good,Average,19,Not Placed
+24,Male,CSE,6.74,92.91,66.42,2,76.77,No,Advanced,Regularly,0,Not Started,Weak,7,Not Placed
+30,Male,AI-ML,7.25,67.06,70.64,1,81.77,Yes,Intermediate,Occasionally,6,Not Started,Average,8,Not Placed
+25,Male,Mechanical,8.74,90.51,89.89,1,59.82,Yes,Advanced,Regularly,6,Not Started,Weak,6,Placed
+27,Female,Other,8.26,63.59,55.75,1,60.59,No,Intermediate,None,3,Not Started,Good,13,Not Placed
+26,Female,Mechanical,8.1,70.2,85.28,3,52.07,No,Advanced,Regularly,1,Good,Average,1,Not Placed
+19,Other,ECE,6.76,69.77,75.51,2,66.1,Yes,Beginner,Regularly,2,Good,Average,10,Not Placed
+28,Male,Mechanical,9.21,98.06,63.82,0,77.99,No,Beginner,None,7,Not Started,Average,7,Placed
+27,Female,CSE,7.36,92.69,73.66,0,92.9,Yes,Advanced,None,7,Not Started,Weak,12,Not Placed
+19,Female,CSE,9.9,85.85,64.4,2,83.35,No,Advanced,Regularly,10,Basic,Weak,20,Placed
+22,Male,ECE,8.17,86.99,78.61,0,71.77,No,Intermediate,Regularly,10,Basic,Average,14,Placed
+30,Other,ECE,5.63,79.73,70.82,0,97.66,No,Advanced,Occasionally,5,Not Started,Average,2,Not Placed
+22,Male,Other,8.38,96.67,57.89,3,85.96,Yes,Advanced,None,9,Not Started,Good,13,Placed
+23,Other,Other,6.63,76.84,55.6,1,96.51,Yes,Intermediate,Regularly,8,Basic,Good,14,Placed
+20,Female,Civil,8.43,71.74,76.24,2,76.38,No,Intermediate,None,10,Basic,Good,1,Not Placed
+25,Other,ECE,5.35,62.17,93.32,1,62.95,Yes,Intermediate,Occasionally,8,Not Started,Good,18,Not Placed
+30,Female,AI-ML,5.87,89.59,66.51,0,52.64,No,Advanced,Regularly,3,Good,Good,11,Not Placed
+18,Male,Mechanical,9.28,87.32,85.18,2,86.3,No,Intermediate,Regularly,0,Good,Weak,19,Placed
+23,Male,ECE,6.14,71.91,81.62,3,56.07,Yes,Beginner,Regularly,0,Not Started,Good,3,Not Placed
+21,Male,IT,9.19,56.11,94.71,0,65.14,Yes,Beginner,None,9,Not Started,Good,2,Placed
+18,Other,Civil,6.4,91.92,89.41,0,76.62,Yes,Beginner,Occasionally,4,Basic,Average,4,Not Placed
+24,Female,IT,8.21,55.5,77.2,3,78.22,Yes,Advanced,None,1,Basic,Weak,2,Not Placed
+26,Male,CSE,8.47,85.96,81.54,2,80.03,No,Beginner,Regularly,5,Good,Good,14,Placed
+30,Male,Other,7.56,97.69,93.12,0,58.31,Yes,Advanced,Occasionally,6,Not Started,Good,18,Placed
+21,Female,Mechanical,6.53,74.26,69.18,0,68.99,Yes,Advanced,Regularly,0,Basic,Good,1,Placed
+21,Male,ECE,6.06,65.34,65.69,0,80.86,No,Beginner,Regularly,5,Good,Average,11,Not Placed
+23,Female,IT,5.17,86.01,50.52,0,98.49,No,Intermediate,None,7,Good,Average,4,Not Placed
+29,Female,Mechanical,6.52,90.95,89.67,0,86.38,No,Advanced,Regularly,4,Good,Average,16,Placed
+20,Female,CSE,8.27,79.04,88.45,0,96.13,No,Beginner,Occasionally,6,Basic,Good,13,Placed
+30,Female,Other,9.69,97.55,55.01,0,88.11,Yes,Advanced,Regularly,9,Basic,Average,9,Placed
+29,Female,AI-ML,9.36,57.27,77.69,3,79.59,Yes,Intermediate,Regularly,5,Not Started,Good,2,Placed
+23,Other,Civil,8.83,77.21,72.27,1,59.6,No,Intermediate,None,3,Not Started,Weak,3,Not Placed
+24,Male,Mechanical,8.94,86.61,55.7,0,83.33,No,Beginner,Occasionally,6,Good,Good,5,Placed
+28,Other,Mechanical,8.32,92.96,97.07,2,81.17,Yes,Advanced,None,9,Good,Average,15,Placed
+27,Male,AI-ML,6.3,62.89,60.31,0,80.12,Yes,Advanced,Regularly,8,Basic,Weak,6,Placed
+27,Other,Mechanical,9.54,90.2,53.23,1,74.49,Yes,Advanced,None,9,Basic,Good,14,Placed
+20,Female,CSE,8.35,79.32,78.55,0,76.43,Yes,Advanced,None,9,Not Started,Weak,20,Placed
+24,Male,CSE,7.8,72.45,85.47,0,66.72,Yes,Beginner,None,6,Not Started,Weak,19,Not Placed
+20,Male,AI-ML,5.55,60.8,51.56,1,75.97,No,Intermediate,None,4,Not Started,Weak,10,Not Placed
+30,Other,Civil,7.24,93.07,81.62,1,59.88,No,Beginner,Regularly,6,Basic,Good,20,Placed
+30,Other,ECE,7.3,61.92,75.55,1,90.26,No,Advanced,Regularly,2,Good,Average,0,Not Placed
+19,Male,IT,9.32,68.63,54.96,0,59.29,No,Advanced,Occasionally,1,Not Started,Good,4,Placed
+29,Other,ECE,7.73,67.76,58.28,1,54.25,Yes,Intermediate,None,10,Not Started,Average,12,Placed
+27,Other,Mechanical,6.9,93.34,77.26,0,71.81,No,Advanced,None,4,Basic,Good,20,Placed
+21,Other,IT,9.88,84.6,64.23,1,82.92,Yes,Beginner,Occasionally,3,Not Started,Good,13,Placed
+29,Female,AI-ML,5.55,90.05,95.04,0,71.89,Yes,Beginner,None,4,Good,Good,8,Not Placed
+25,Female,AI-ML,7.11,66.02,89.3,2,63.84,Yes,Intermediate,Occasionally,7,Basic,Average,16,Placed
+30,Other,Civil,5.21,82.49,97.21,0,77.91,Yes,Beginner,Regularly,3,Not Started,Good,14,Not Placed
+26,Other,IT,8.7,80.16,62.46,1,67.35,Yes,Beginner,Occasionally,8,Not Started,Weak,20,Placed
+24,Female,CSE,9.59,91.64,96.55,0,96.64,Yes,Beginner,None,6,Basic,Good,6,Placed
+18,Female,IT,6.4,94.87,70.7,3,96.13,Yes,Beginner,Occasionally,9,Basic,Weak,11,Not Placed
+20,Male,Mechanical,9.29,55.53,66.68,2,75.12,No,Advanced,Regularly,6,Not Started,Average,5,Placed
+30,Male,CSE,6.46,84.66,52.42,0,66.39,Yes,Beginner,None,7,Good,Average,20,Placed
+29,Female,Other,9.55,57.28,52.53,0,86.86,No,Intermediate,Regularly,5,Basic,Good,15,Placed
+26,Other,Other,8.77,79.15,83.22,1,51.84,No,Intermediate,Regularly,7,Good,Good,4,Placed
+29,Other,Other,9.02,67.66,71.98,0,73.74,Yes,Beginner,Occasionally,2,Not Started,Good,8,Placed
+18,Other,AI-ML,5.09,68.5,60.87,1,66.82,Yes,Intermediate,Regularly,9,Good,Weak,13,Placed
+26,Other,IT,9.81,70.53,79.47,0,96.03,No,Beginner,None,9,Not Started,Average,7,Placed
+25,Male,Other,8.63,82.34,62.14,1,50.6,No,Intermediate,Regularly,0,Not Started,Weak,13,Placed
+18,Female,ECE,6.52,69.7,77.73,0,77.64,No,Intermediate,Regularly,5,Not Started,Weak,11,Not Placed
+23,Other,Civil,9.15,87.24,67.24,1,87.03,No,Beginner,Occasionally,0,Not Started,Good,9,Not Placed
+22,Male,ECE,6.41,72.8,89.53,0,74.25,Yes,Beginner,Regularly,8,Good,Good,19,Placed
+23,Other,Other,9.36,58.01,89.39,0,54.27,Yes,Advanced,Occasionally,1,Not Started,Weak,19,Placed
+27,Female,Civil,5.56,89.49,72.91,0,98.62,Yes,Beginner,Occasionally,10,Not Started,Weak,20,Not Placed
+29,Male,Mechanical,8.52,67.57,66.84,2,75.9,No,Beginner,None,1,Good,Good,12,Not Placed
+30,Female,ECE,7.7,74.04,67.4,0,80.71,Yes,Advanced,None,6,Basic,Good,18,Placed
+30,Female,IT,5.48,85.16,88.67,0,61.83,No,Beginner,None,1,Good,Weak,14,Not Placed
+30,Male,IT,6.21,69.63,65.75,1,74.17,Yes,Beginner,None,9,Good,Good,7,Placed
+22,Male,ECE,5.06,57.49,60.03,1,71.46,No,Advanced,Occasionally,7,Good,Good,20,Not Placed
+23,Male,Other,7.34,71.45,54.07,1,53.74,Yes,Beginner,Regularly,5,Not Started,Weak,9,Not Placed
+22,Male,IT,6.51,96.56,72.4,0,55.31,Yes,Beginner,None,6,Not Started,Weak,2,Not Placed
+28,Male,Mechanical,7.99,83.24,73.14,3,91.87,No,Advanced,None,6,Not Started,Average,20,Placed
+29,Male,CSE,6.49,84.55,90.36,0,61.99,No,Advanced,None,5,Basic,Weak,2,Not Placed
+22,Male,Other,6.5,82.82,60.62,0,59.75,No,Intermediate,Regularly,9,Not Started,Good,4,Not Placed
+21,Other,Mechanical,8.72,63.76,68.29,3,75.25,No,Beginner,None,10,Basic,Weak,15,Not Placed
+20,Female,Civil,5.24,73.41,88.8,1,88.44,No,Intermediate,Regularly,8,Not Started,Weak,16,Not Placed
+20,Male,Mechanical,9.51,88.04,89.53,1,53.1,Yes,Intermediate,Occasionally,8,Good,Weak,5,Placed
+21,Other,Other,9.26,59.46,68.46,0,78.84,No,Advanced,Occasionally,6,Not Started,Average,19,Placed
+26,Other,Civil,8.34,67.23,72.04,3,55.96,Yes,Beginner,Occasionally,8,Basic,Average,19,Not Placed
+19,Other,Other,7.97,67.16,64.56,2,51.82,Yes,Beginner,Regularly,9,Basic,Good,15,Placed
+26,Female,IT,9.46,74.01,94.76,0,52.64,Yes,Advanced,None,2,Not Started,Average,1,Placed
+18,Male,CSE,5.93,98.14,55.69,3,91.71,Yes,Intermediate,None,2,Good,Weak,19,Not Placed
+18,Other,Other,5.39,57.97,94.82,0,55.9,Yes,Advanced,None,0,Not Started,Average,14,Not Placed
+22,Female,Other,6.2,77.82,82.83,1,52.26,No,Beginner,None,4,Not Started,Weak,17,Not Placed
+23,Female,IT,8.97,62.89,75.52,2,71.89,No,Advanced,None,3,Not Started,Average,0,Not Placed
+23,Female,AI-ML,5.17,97.71,51.57,2,92.2,Yes,Beginner,Regularly,1,Good,Average,18,Not Placed
+20,Other,IT,7.91,59.99,72.83,2,63.12,Yes,Intermediate,Occasionally,8,Basic,Average,11,Placed
+24,Male,Civil,9.98,72.76,69.57,0,71.09,No,Beginner,None,2,Good,Weak,7,Placed
+26,Other,IT,9.28,87.47,57.74,0,52.0,No,Intermediate,Occasionally,7,Basic,Average,5,Placed
+28,Other,IT,7.61,86.0,81.51,1,72.45,Yes,Intermediate,Regularly,5,Basic,Weak,11,Placed
+29,Male,CSE,5.32,73.6,96.62,1,78.88,No,Beginner,Regularly,4,Basic,Weak,6,Not Placed
+27,Male,IT,9.16,70.25,76.99,2,78.55,No,Beginner,None,0,Good,Good,17,Placed
+25,Male,Other,7.99,72.49,84.31,1,66.62,No,Intermediate,Regularly,3,Not Started,Average,13,Not Placed
+23,Female,CSE,5.57,66.63,53.29,0,65.78,Yes,Advanced,Occasionally,2,Not Started,Good,7,Not Placed
+29,Male,ECE,5.47,64.03,70.05,0,55.33,No,Beginner,None,0,Not Started,Good,19,Not Placed
+25,Other,AI-ML,9.55,76.25,55.59,1,68.34,Yes,Intermediate,None,4,Not Started,Weak,13,Placed
+29,Male,CSE,8.35,66.82,79.41,3,54.97,Yes,Intermediate,Occasionally,5,Not Started,Average,4,Placed
+22,Other,Civil,9.15,67.65,95.05,3,88.33,Yes,Advanced,None,1,Good,Weak,8,Placed
+25,Female,ECE,9.39,83.9,81.77,1,98.31,Yes,Beginner,None,2,Good,Weak,7,Placed
+27,Other,CSE,7.86,97.62,53.69,0,98.5,Yes,Intermediate,Occasionally,10,Good,Average,1,Placed
+29,Other,CSE,7.59,81.56,67.02,3,93.25,No,Advanced,None,5,Good,Weak,15,Placed
+21,Male,AI-ML,7.15,58.39,76.43,0,80.04,Yes,Intermediate,None,3,Good,Average,12,Placed
+27,Male,Other,6.58,58.33,69.35,0,85.04,Yes,Beginner,Occasionally,8,Good,Average,6,Placed

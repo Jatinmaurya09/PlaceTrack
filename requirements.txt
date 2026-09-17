@@ -1,0 +1,8 @@
+Flask
+pandas
+numpy
+scikit-learn
+joblib
+pdfplumber
+python-dotenv
+gunicorn

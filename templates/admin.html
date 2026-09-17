@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — PlaceTrack</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">PT</div>
+      <span>PlaceTrack</span>
+    </div>
+    <nav>
+      <a href="/admin" class="nav-link active"><span>📊</span> Admin Panel</a>
+      <a href="/predictor" class="nav-link"><span>🔮</span> Placement Predictor</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-mini">
+        <div class="avatar">{{ session_user.name[:1] }}</div>
+        <div>
+          <div class="user-name">{{ session_user.name }}</div>
+          <div class="user-role">{{ session_user.role }}</div>
+        </div>
+      </div>
+      <a href="/logout" class="logout-btn">↩ Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h1 class="page-title">Student Placement Intelligence</h1>
+        <p class="page-sub">Combined view of all students, predictions, and ATS scores</p>
+      </div>
+      <div class="topbar-right">
+        <span class="date-chip">📅 {{ current_date }}</span>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-label">Total Students</div>
+        <div class="stat-value">{{ stats.total }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--success-bg);color:var(--success);">✅</div>
+        <div class="stat-label">Placed</div>
+        <div class="stat-value green">{{ stats.placed }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--danger-bg);color:var(--danger);">❌</div>
+        <div class="stat-label">Not Placed</div>
+        <div class="stat-value" style="color:var(--danger);">{{ stats.not_placed }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📈</div>
+        <div class="stat-label">Placement Rate</div>
+        <div class="stat-value blue">
+          {% if stats.total > 0 %}
+            {{ ((stats.placed / stats.total) * 100)|round(1) }}%
+          {% else %}0%{% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart + Breakdown -->
+    <div class="grid-2">
+      <div class="card">
+        <h2>Placement Distribution</h2>
+        <canvas id="pieChart" height="240"></canvas>
+      </div>
+      <div class="card">
+        <h2>Department-wise Overview</h2>
+        <canvas id="deptChart" height="240"></canvas>
+      </div>
+    </div>
+
+    <!-- Top Performers -->
+    <div class="card">
+      <h2>🏆 Top Performers (Latest Prediction: Placed)</h2>
+      {% set placed_students = students | selectattr('latest_prediction', 'equalto', 'Placed') | list %}
+      {% if placed_students %}
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Roll No</th>
+              <th>Department</th>
+              <th>Latest Probability</th>
+              <th>ATS Score</th>
+            </tr>
+            {% for s in placed_students[:5] %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td><b>{{ s['name'] }}</b></td>
+              <td>{{ s['roll_no'] }}</td>
+              <td>{{ s['department'] }}</td>
+              <td>
+                {% if s['latest_probability'] is not none %}
+                  <span class="badge badge-success">
+                    {{ (s['latest_probability']*100)|round(1) }}%
+                  </span>
+                {% else %}—{% endif %}
+              </td>
+              <td>
+                {% if s['latest_ats'] is not none %}
+                  {{ s['latest_ats'] }}%
+                {% else %}—{% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      {% else %}
+        <p class="text-muted">No placed students yet.</p>
+      {% endif %}
+    </div>
+
+    <!-- All Students -->
+    <div class="card">
+      <h2>📋 All Student Records</h2>
+      {% if students and students|length > 0 %}
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Department</th>
+            <th>Prediction</th>
+            <th>Probability</th>
+            <th>ATS</th>
+            <th>Action</th>
+          </tr>
+          {% for s in students %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td><b>{{ s['name'] }}</b></td>
+            <td>{{ s['roll_no'] }}</td>
+            <td>{{ s['department'] }}</td>
+            <td>
+              {% if s['latest_prediction'] %}
+                <span class="badge {{ 'badge-success' if s['latest_prediction']=='Placed' else 'badge-danger' }}">
+                  {{ s['latest_prediction'] }}
+                </span>
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if s['latest_probability'] is not none %}
+                {{ (s['latest_probability']*100)|round(1) }}%
+              {% else %}—{% endif %}
+            </td>
+            <td>
+              {% if s['latest_ats'] is not none %}
+                {{ s['latest_ats'] }}%
+              {% else %}—{% endif %}
+            </td>
+            <td>
+              <a href="/student/{{ s['roll_no'] }}"
+                 style="color:var(--blue);font-weight:600;text-decoration:none;">
+                View →
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      {% else %}
+      <div style="text-align:center;padding:2rem;">
+        <div style="font-size:3rem;opacity:.25;">👥</div>
+        <p class="text-muted" style="margin-top:.75rem;">
+          No students yet. Predict karke students add karo.
+        </p>
+        <a href="/predictor" class="btn btn-primary" style="margin-top:1rem;">
+          Go to Predictor
+        </a>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Admin Notes Panel -->
+    <div class="card">
+      <h2>📝 Admin Notes</h2>
+      <p class="text-muted" style="font-size:.9rem;margin-bottom:.75rem;">
+        Notes visible only to admin staff (demo — not stored permanently).
+      </p>
+      <textarea id="admin-note" placeholder="Add a note about the placement drive, upcoming companies, etc."
+                style="width:100%;padding:.75rem;border:1.5px solid var(--border);border-radius:8px;font-family:inherit;font-size:.9rem;resize:vertical;min-height:80px;"></textarea>
+      <button class="btn btn-primary" onclick="saveNote()" style="margin-top:.75rem;">
+        💾 Save Note
+      </button>
+      <span id="note-status" class="text-success" style="margin-left:1rem;font-size:.85rem;"></span>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+/* ---------- Pie Chart: Placed vs Not Placed ---------- */
+const placed = {{ stats.placed }};
+const notPlaced = {{ stats.not_placed }};
+
+const pieCtx = document.getElementById("pieChart").getContext("2d");
+new Chart(pieCtx, {
+  type: "doughnut",
+  data: {
+    labels: ["Placed", "Not Placed"],
+    datasets: [{
+      data: [placed, notPlaced],
+      backgroundColor: ["#16a34a", "#dc2626"],
+      borderWidth: 0,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: "bottom" },
+    },
+    cutout: "65%",
+  }
+});
+
+/* ---------- Department-wise Chart ---------- */
+{% set departments = {} %}
+{% for s in students %}
+  {% if s['department'] %}
+    {% if s['department'] in departments %}
+      {% set _ = departments.update({s['department']: departments[s['department']] + 1}) %}
+    {% else %}
+      {% set _ = departments.update({s['department']: 1}) %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+const deptLabels = {{ departments.keys()|list|tojson }};
+const deptCounts = {{ departments.values()|list|tojson }};
+
+const deptCtx = document.getElementById("deptChart").getContext("2d");
+new Chart(deptCtx, {
+  type: "bar",
+  data: {
+    labels: deptLabels.length ? deptLabels : ["No data"],
+    datasets: [{
+      label: "Students",
+      data: deptCounts.length ? deptCounts : [0],
+      backgroundColor: "#2563eb",
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+  }
+});
+
+/* ---------- Admin Note Save ---------- */
+function saveNote() {
+  const note = document.getElementById("admin-note").value.trim();
+  const status = document.getElementById("note-status");
+  if (!note) {
+    status.textContent = "⚠ Note is empty";
+    status.style.color = "var(--warning)";
+  } else {
+    status.textContent = "✅ Note saved (demo only)";
+    status.style.color = "var(--success)";
+  }
+  setTimeout(() => { status.textContent = ""; }, 2500);
+}
+</script>
+</body>
+</html>

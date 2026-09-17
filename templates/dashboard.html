@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — PlaceTrack</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">PT</div>
+          <span>PlaceTrack</span>
+        </div>
+        <nav>
+          <a href="/dashboard" class="nav-link active"
+            ><span>🏠</span> Dashboard</a
+          >
+          <a href="/predictor" class="nav-link"
+            ><span>🔮</span> Placement Predictor</a
+          >
+          <a href="/ats" class="nav-link"><span>📄</span> Resume ATS</a>
+          <a href="/companies" class="nav-link"><span>🏢</span> Companies</a>
+          {% if session_user.is_admin %}
+          <a href="/admin" class="nav-link"><span>📊</span> Admin Panel</a>
+          {% endif %}
+          <a href="/auto-apply" class="nav-link"><span>⚡</span> Auto Apply</a>
+          <a href="/applications" class="nav-link"
+            ><span>📨</span> Applications</a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-mini">
+            <div class="avatar">{{ session_user.name[:1] }}</div>
+            <div>
+              <div class="user-name">{{ session_user.name }}</div>
+              <div class="user-role">{{ session_user.role }}</div>
+            </div>
+          </div>
+          <a href="/logout" class="logout-btn">↩ Logout</a>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h1 class="page-title">
+              {% if viewing_as_admin %}Viewing: {{ student['name'] }}{% else
+              %}Hello, {{ session_user.name }} 👋{% endif %}
+            </h1>
+            <p class="page-sub">Here is your current placement readiness</p>
+          </div>
+          <div class="topbar-right">
+            <span class="date-chip">📅 {{ current_date }}</span>
+          </div>
+        </header>
+
+        {% if viewing_as_admin %}
+        <a
+          href="/admin"
+          class="btn btn-secondary"
+          style="margin-bottom: 1.25rem"
+        >
+          ← Back to Admin Panel
+        </a>
+        {% endif %}
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-label">CGPA</div>
+            <div class="stat-value">{{ latest.cgpa if latest else '—' }}</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-label">Placement Probability</div>
+            <div class="stat-value green">
+              {% if latest and latest.probability is not none %} {{
+              (latest.probability * 100)|round(0)|int }}% {% else %}—{% endif %}
+            </div>
+            {% if latest and latest.probability is not none %}
+            <div class="progress" style="margin-top: 0.5rem">
+              <div
+                class="progress-bar green"
+                style="width:{{ (latest.probability*100)|round(0)|int }}%"
+              ></div>
+            </div>
+            {% endif %}
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📄</div>
+            <div class="stat-label">ATS Score</div>
+            <div class="stat-value blue">
+              {% if latest_ats %}{{ latest_ats.ats_score }}/100{% else %}—{%
+              endif %}
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📋</div>
+            <div class="stat-label">Latest Status</div>
+            <div
+              class="stat-value"
+              style="font-size: 1.1rem; margin-top: 0.5rem"
+            >
+              {% if latest %}
+              <span
+                class="badge {{ 'badge-success' if latest.prediction=='Placed' else 'badge-danger' }}"
+              >
+                {{ latest.prediction }}
+              </span>
+              {% else %}
+              <span class="text-muted" style="font-size: 0.9rem"
+                >No prediction yet</span
+              >
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Column -->
+        <div class="grid-2">
+          <!-- Academic & Skills -->
+          <div class="card">
+            <h2>Academic &amp; Skill Profile</h2>
+            <div class="table-wrap">
+              <table>
+                <tr>
+                  <th>Roll Number</th>
+                  <td>{{ student['roll_no'] }}</td>
+                </tr>
+                <tr>
+                  <th>Name</th>
+                  <td>{{ student['name'] }}</td>
+                </tr>
+                <tr>
+                  <th>Department</th>
+                  <td>{{ student['department'] }}</td>
+                </tr>
+                {% if latest %}
+                <tr>
+                  <th>Branch</th>
+                  <td>{{ latest.branch }}</td>
+                </tr>
+                <tr>
+                  <th>CGPA</th>
+                  <td>{{ latest.cgpa }}</td>
+                </tr>
+                <tr>
+                  <th>10th %</th>
+                  <td>{{ latest.tenth_percentage }}</td>
+                </tr>
+                <tr>
+                  <th>12th %</th>
+                  <td>{{ latest.twelfth_percentage }}</td>
+                </tr>
+                <tr>
+                  <th>Backlogs</th>
+                  <td>{{ latest.backlogs }}</td>
+                </tr>
+                <tr>
+                  <th>Attendance %</th>
+                  <td>{{ latest.attendance_percentage }}</td>
+                </tr>
+                <tr>
+                  <th>Internship</th>
+                  <td>{{ latest.internship_experience }}</td>
+                </tr>
+                <tr>
+                  <th>DSA Level</th>
+                  <td>{{ latest.dsa_level }}</td>
+                </tr>
+                <tr>
+                  <th>Coding Practice</th>
+                  <td>{{ latest.coding_practice }}</td>
+                </tr>
+                <tr>
+                  <th>Projects</th>
+                  <td>{{ latest.projects_completed }}</td>
+                </tr>
+                <tr>
+                  <th>Aptitude</th>
+                  <td>{{ latest.aptitude_level }}</td>
+                </tr>
+                <tr>
+                  <th>Communication</th>
+                  <td>{{ latest.communication_level }}</td>
+                </tr>
+                <tr>
+                  <th>Mock Interviews</th>
+                  <td>{{ latest.mock_interviews }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td colspan="2" class="text-muted">
+                    Fill the predictor form to populate your profile.
+                  </td>
+                </tr>
+                {% endif %}
+              </table>
+            </div>
+          </div>
+
+          <!-- Prediction History Chart -->
+          <div class="card">
+            <h2>Prediction History</h2>
+            {% if predictions and predictions|length > 0 %}
+            <canvas id="historyChart" height="200"></canvas>
+            {% else %}
+            <p class="text-muted" style="padding: 1rem 0">
+              No predictions yet. Go to
+              <a href="/predictor" style="color: var(--blue); font-weight: 600"
+                >Predictor</a
+              >
+              to start.
+            </p>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Recent Predictions -->
+        <div class="card">
+          <h2>Recent Predictions</h2>
+          {% if predictions %}
+          <div class="table-wrap">
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>CGPA</th>
+                <th>Result</th>
+                <th>Probability</th>
+              </tr>
+              {% for p in predictions[:8] %}
+              <tr>
+                <td>{{ p['created_at'] }}</td>
+                <td>{{ p['cgpa'] }}</td>
+                <td>
+                  <span
+                    class="badge {{ 'badge-success' if p['prediction']=='Placed' else 'badge-danger' }}"
+                  >
+                    {{ p['prediction'] }}
+                  </span>
+                </td>
+                <td>
+                  {% if p['probability'] is not none %} {{
+                  (p['probability']*100)|round(1) }}% {% else %}—{% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          {% else %}
+          <p class="text-muted">No predictions recorded yet.</p>
+          {% endif %}
+        </div>
+
+        <!-- Insights -->
+        <div class="card">
+          <h2>💡 Suggested Next Actions</h2>
+          {% if latest %} {% if latest.backlogs > 0 %}
+          <div class="insight">
+            <div class="insight-icon">⚠</div>
+            <div>
+              <div class="insight-title">Clear your backlogs</div>
+              <div class="insight-desc">
+                You currently have {{ latest.backlogs }} backlog(s). Clearing
+                them significantly improves placement chances.
+              </div>
+            </div>
+          </div>
+          {% endif %} {% if latest.internship_experience == 'No' %}
+          <div class="insight">
+            <div class="insight-icon">💼</div>
+            <div>
+              <div class="insight-title">Gain internship experience</div>
+              <div class="insight-desc">
+                Even a 2-month internship boosts placement probability.
+              </div>
+            </div>
+          </div>
+          {% endif %} {% if latest_ats and latest_ats.ats_score < 60 %}
+          <div class="insight">
+            <div class="insight-icon">📄</div>
+            <div>
+              <div class="insight-title">Improve your resume ATS score</div>
+              <div class="insight-desc">
+                Currently {{ latest_ats.ats_score }}%. Add missing keywords to
+                reach 60%+.
+              </div>
+            </div>
+          </div>
+          {% endif %} {% if latest.dsa_level == 'Beginner' or
+          latest.coding_practice == 'None' %}
+          <div class="insight">
+            <div class="insight-icon">💻</div>
+            <div>
+              <div class="insight-title">Practice DSA regularly</div>
+              <div class="insight-desc">
+                Aim for Intermediate level. Solve problems on LeetCode daily.
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <div class="insight">
+            <div class="insight-icon">🎯</div>
+            <div>
+              <div class="insight-title">Give more mock interviews</div>
+              <div class="insight-desc">
+                Currently {{ latest.mock_interviews }}. Target at least 5 before
+                placement season.
+              </div>
+            </div>
+          </div>
+          {% else %}
+          <p class="text-muted">
+            Fill the predictor form to get personalized suggestions.
+          </p>
+          {% endif %}
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      {% if predictions and predictions|length > 0 %}
+      // Build chart from predictions (reverse chronological → chronological)
+      const rawData = [
+        {% for p in predictions[::-1] %}
+          { date: "{{ p['created_at'][:10] }}",
+            prob: {{ (p['probability']*100)|round(1) if p['probability'] is not none else 0 }} },
+        {% endfor %}
+      ];
+
+      const ctx = document.getElementById("historyChart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: rawData.map(d => d.date),
+          datasets: [{
+            label: "Placement Probability %",
+            data: rawData.map(d => d.prob),
+            borderColor: "#2563eb",
+            backgroundColor: "rgba(37,99,235,.1)",
+            borderWidth: 2,
+            fill: true,
+            tension: .35,
+            pointBackgroundColor: "#2563eb",
+            pointRadius: 4,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, max: 100, ticks: { callback: v => v + "%" } }
+          }
+        }
+      });
+      {% endif %}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Apply — PlaceTrack</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">PT</div>
+      <span>PlaceTrack</span>
+    </div>
+    <nav>
+      <a href="/dashboard" class="nav-link"><span>🏠</span> Dashboard</a>
+      <a href="/predictor" class="nav-link"><span>🔮</span> Placement Predictor</a>
+      <a href="/ats" class="nav-link"><span>📄</span> Resume ATS</a>
+      <a href="/companies" class="nav-link"><span>🏢</span> Company Matches</a>
+      <a href="/auto-apply" class="nav-link active"><span>⚡</span> Auto Apply</a>
+      <a href="/applications" class="nav-link"><span>📨</span> Applications</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-mini">
+        <div class="avatar">{{ session_user.name[:1] }}</div>
+        <div>
+          <div class="user-name">{{ session_user.name }}</div>
+          <div class="user-role">{{ session_user.role }}</div>
+        </div>
+      </div>
+      <a href="/logout" class="logout-btn">↩ Logout</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h1 class="page-title">Auto Apply Settings</h1>
+        <p class="page-sub">Automate job matching and get email approval requests</p>
+      </div>
+      <div class="topbar-right">
+        <span class="date-chip">📅 {{ current_date }}</span>
+      </div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📨</div>
+        <div class="stat-label">Total Requests</div>
+        <div class="stat-value">{{ stats.total }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--success-bg);color:var(--success);">✅</div>
+        <div class="stat-label">Approved</div>
+        <div class="stat-value green">{{ stats.approved }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--danger-bg);color:var(--danger);">✕</div>
+        <div class="stat-label">Skipped</div>
+        <div class="stat-value" style="color:var(--danger);">{{ stats.skipped }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⏳</div>
+        <div class="stat-label">Pending</div>
+        <div class="stat-value blue">{{ stats.pending }}</div>
+      </div>
+    </div>
+
+    {% if not settings or not settings['enabled'] %}
+      <div class="alert alert-info">
+        ⚡ Auto-apply is currently <b>OFF</b>. Turn it on below to start receiving email match notifications.
+      </div>
+    {% else %}
+      <div class="alert alert-success">
+        ✅ Auto-apply is <b>ON</b>. You'll receive emails when a job matches ≥ {{ settings['min_match'] }}%.
+      </div>
+    {% endif %}
+
+    <div class="card">
+      <h2>⚙️ Configuration</h2>
+
+      <form id="auto-apply-form">
+        <div class="form-section">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;">
+            <div>
+              <div style="font-weight:700;font-size:.95rem;">Enable Auto Apply</div>
+              <div style="color:var(--text-muted);font-size:.82rem;">
+                Automatically scan jobs and send you email approvals
+              </div>
+            </div>
+            <label style="display:flex;align-items:center;gap:.5rem;cursor:pointer;">
+              <input type="checkbox" id="enabled" name="enabled"
+                     {% if settings and settings['enabled'] %}checked{% endif %}
+                     style="width:20px;height:20px;cursor:pointer;">
+              <span style="font-weight:600;">ON</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>📧 Notification Email</label>
+              <input type="email" id="notification_email" name="notification_email"
+                     placeholder="you@gmail.com"
+                     value="{{ settings['notification_email'] if settings else '' }}" required>
+              <small style="color:var(--text-muted);font-size:.75rem;">
+                Emails will be sent to this address
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label>🎯 Minimum Match %</label>
+              <select id="min_match" name="min_match">
+                {% set mm = settings['min_match'] if settings else 70 %}
+                <option value="50" {% if mm == 50 %}selected{% endif %}>50% - Show more jobs</option>
+                <option value="60" {% if mm == 60 %}selected{% endif %}>60%</option>
+                <option value="70" {% if mm == 70 %}selected{% endif %}>70% - Recommended</option>
+                <option value="80" {% if mm == 80 %}selected{% endif %}>80% - Strict</option>
+                <option value="90" {% if mm == 90 %}selected{% endif %}>90% - Only perfect matches</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>💼 Preferred Roles</label>
+              <input type="text" id="preferred_roles" name="preferred_roles"
+                     placeholder="e.g. Software Developer, Data Analyst"
+                     value="{{ settings['preferred_roles'] if settings else '' }}">
+              <small style="color:var(--text-muted);font-size:.75rem;">
+                Comma-separated. Leave blank for any.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label>📍 Preferred Locations</label>
+              <input type="text" id="preferred_locations" name="preferred_locations"
+                     placeholder="e.g. Bangalore, Hyderabad"
+                     value="{{ settings['preferred_locations'] if settings else '' }}">
+              <small style="color:var(--text-muted);font-size:.75rem;">
+                Comma-separated. Leave blank for any.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label>📊 Max Applications Per Day</label>
+              <select id="max_per_day" name="max_per_day">
+                {% set mpd = settings['max_per_day'] if settings else 5 %}
+                <option value="3" {% if mpd == 3 %}selected{% endif %}>3</option>
+                <option value="5" {% if mpd == 5 %}selected{% endif %}>5</option>
+                <option value="10" {% if mpd == 10 %}selected{% endif %}>10</option>
+                <option value="20" {% if mpd == 20 %}selected{% endif %}>20</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>🔒 Email Confirmation</label>
+              <select id="email_required" name="email_required">
+                <option value="1" {% if not settings or settings['email_required'] %}selected{% endif %}>
+                  Required (safest)
+                </option>
+                <option value="0" {% if settings and not settings['email_required'] %}selected{% endif %}>
+                  Not required (auto-apply directly)
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:1rem;margin-top:1rem;">
+          <button type="submit" class="btn btn-primary" style="flex:1;">
+            💾 Save Settings
+          </button>
+          <button type="button" class="btn btn-secondary" onclick="runNow()" style="flex:1;">
+            ▶ Run Now (Test)
+          </button>
+        </div>
+
+        <div id="save-msg" style="margin-top:1rem;"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>ℹ️ How Auto Apply Works</h2>
+
+      <div class="insight">
+        <div class="insight-icon">1</div>
+        <div>
+          <div class="insight-title">System scans jobs.csv every 5 minutes</div>
+          <div class="insight-desc">New jobs are matched against your skills from resume + predictor form.</div>
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-icon">2</div>
+        <div>
+          <div class="insight-title">Match score above threshold triggers email</div>
+          <div class="insight-desc">If a job matches ≥ {{ settings['min_match'] if settings else 70 }}%, you get an email.</div>
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-icon">3</div>
+        <div>
+          <div class="insight-title">You click YES or NO in the email</div>
+          <div class="insight-desc">YES → application submitted. NO → skipped. You stay in full control.</div>
+        </div>
+      </div>
+
+      <div class="insight">
+        <div class="insight-icon">4</div>
+        <div>
+          <div class="insight-title">Track everything in Applications tab</div>
+          <div class="insight-desc">Full history of every match, request, and response.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+document.getElementById("auto-apply-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const msgBox = document.getElementById("save-msg");
+  msgBox.innerHTML = '<div class="alert alert-info">⏳ Saving...</div>';
+
+  const payload = {
+    enabled: document.getElementById("enabled").checked,
+    notification_email: document.getElementById("notification_email").value.trim(),
+    min_match: document.getElementById("min_match").value,
+    preferred_roles: document.getElementById("preferred_roles").value.trim(),
+    preferred_locations: document.getElementById("preferred_locations").value.trim(),
+    max_per_day: document.getElementById("max_per_day").value,
+    email_required: document.getElementById("email_required").value === "1",
+  };
+
+  try {
+    const res = await fetch("/auto-apply/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      msgBox.innerHTML = `<div class="alert alert-error">❌ ${data.error}</div>`;
+      return;
+    }
+
+    msgBox.innerHTML = `<div class="alert alert-success">✅ ${data.message}</div>`;
+    setTimeout(() => location.reload(), 1200);
+  } catch (err) {
+    msgBox.innerHTML = `<div class="alert alert-error">Error: ${err.message}</div>`;
+  }
+});
+
+async function runNow() {
+  const msgBox = document.getElementById("save-msg");
+  msgBox.innerHTML = '<div class="alert alert-info">⏳ Running auto-apply scan...</div>';
+
+  try {
+    const res = await fetch("/auto-apply/run-now", { method: "POST" });
+    const data = await res.json();
+
+    if (data.errors && data.errors.length) {
+      msgBox.innerHTML = `<div class="alert alert-error">⚠ ${data.errors.join("<br>")}</div>`;
+    } else {
+      msgBox.innerHTML = `<div class="alert alert-success">✅ ${data.message}</div>`;
+    }
+    setTimeout(() => location.reload(), 3000);
+  } catch (err) {
+    msgBox.innerHTML = `<div class="alert alert-error">Error: ${err.message}</div>`;
+  }
+}
+</script>
+</body>
+</html>
